@@ -90,7 +90,6 @@ private
 	end
 
 	def play_with_player(player)
-		first_turn = true
 
 		# prompt each user until either busted or stands
 		while(!player.busted? && !player.standing?)
@@ -105,7 +104,7 @@ private
 
 			# prompt for option and process
 			card = nil
-			case (@ui.prompt_options(first_turn,player.can_split?))
+			case (@ui.prompt_options(player.can_double?,player.can_split?))
 				when "h"
 					card = @deck.pick
 					player.deal(card)
@@ -118,7 +117,6 @@ private
 					player.stand!
 				else
 			end # end case
-			first_turn = false
 
 			# inform UI
 			@ui.print_card(card) unless card.nil?
