@@ -21,6 +21,14 @@ class Dealer < Player
 		hand_value >= softlimit
 	end
 
+	def upcard
+		if !hand.empty?
+			hand[0]
+		else
+			nil
+		end
+	end
+
 	# hide vestigial parent functions
 	private :push!
 	private :lose!

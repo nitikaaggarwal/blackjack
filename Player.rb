@@ -2,7 +2,7 @@ require 'Card'
 
 class Player
 	
-	attr_reader :balance
+	attr_accessor :balance
 	attr_reader :bet
 	attr_reader :standing
 	attr_reader :hand
@@ -56,7 +56,7 @@ class Player
 
 	def win!(payoff)
 		@standing = false
-		@balance += (1.0 + payoff)*@bet
+		@balance += Integer((1.0 + payoff)*@bet)
 		@bet = 0
 	end
 
@@ -84,6 +84,10 @@ class Player
 		@standing = true
 	end
 
+	def blackjack?
+		hand_value == BustLimit
+	end
+
 	def hand_value
 
 		value = 0
@@ -100,13 +104,16 @@ class Player
 		# subtract ace values
 		# until you reach the
 		# BustLimit, if possible
-		num_aces
 		while (value > @BustLimit and num_aces > 0)
 			value -= 10
 			num_aces -= 1
 		end
 
 		value
+	end
+
+	def clear_hand!
+		@hand = Array.new
 	end
 
 end
