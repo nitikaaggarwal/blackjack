@@ -4,7 +4,6 @@ class Player
 	
 	attr_accessor :balance
 	attr_reader :bet
-	attr_reader :standing
 	attr_reader :hand
 
 	# name of player
@@ -31,6 +30,9 @@ class Player
 
 	end
 
+	def standing?
+		@standing
+	end
 
 	def can_split?
 		if (hand.length > 1 and hand[0].value == hand[1].value)
@@ -66,18 +68,11 @@ class Player
 		@bet = 0
 	end
 
-	def double?
-
+	def double!
 		if @balance >= @bet 
-
 			@balance -= @bet
 			@bet *= 2
-			true
-
-		else
-			false
 		end
-
 	end
 
 	def stand!
@@ -85,7 +80,7 @@ class Player
 	end
 
 	def blackjack?
-		hand_value == BustLimit
+		hand.length == 2 and hand_value == BustLimit
 	end
 
 	def hand_value

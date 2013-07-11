@@ -33,7 +33,7 @@ class Dealer < Player
 	private :push!
 	private :lose!
 	private :win!
-	private :double?
+	private :double!
 	private :make_bet?
 
 end

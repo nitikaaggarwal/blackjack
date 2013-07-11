@@ -6,7 +6,7 @@ class UI
 		puts "Good luck and happy gambling!\n\n"
 	end
 
-	def prompt_numplayers
+	def prompt_num_players
 		puts "Please enter number of players:"
 		num_players = Integer(gets.chomp)
 		puts ""
@@ -34,7 +34,7 @@ class UI
 	def prompt_bet(player_name, max_bet)
 		bet = 0
 		begin
-			puts "Enter an integral bet for player " + player_name + " no more than " + max_bet.to_s
+			puts "Enter an integral bet for " + player_name + " no more than $" + max_bet.to_s
 			inputstring = gets.chomp
 			raise ArgumentError unless bet.is_a? Integer
 			bet = Integer(inputstring)
@@ -61,8 +61,6 @@ class UI
 		if split
 			options_string = options_string + ", t - split"
 		end
-		options_string = options_string + ", q - quit"
-
 
 		begin
 			# prompt the user
@@ -75,7 +73,7 @@ class UI
 			retval = ""
 	
 			# check for valid input
-			if (op.eql? "h" or op.eql? "s" or (op.eql? "d" and double) or (op.eql? "t" and split) or op.eql? "q")
+			if (op.eql? "h" or op.eql? "s" or (op.eql? "d" and double) or (op.eql? "t" and split))
 				retval = op
 			else
 				raise ArgumentError, "Bummer! Choose from the options below"
@@ -102,6 +100,7 @@ class UI
 	end
 
 	def print_lose(name,bet)
+		bet = -bet
 		puts "#{name}, you lost $#{bet.to_s}"
 	end
 
@@ -109,12 +108,12 @@ class UI
 		print "You now have $#{balance.to_s} remaining\n\n"
 	end
 
-	def print_push(name,bet)
+	def print_push(name)
 		puts "#{name}, your game ended in a push."
 	end
 
 	def print_win(name,bet)
-		puts "Congratulations #{name}! You won your bet worth $#{bet.to_s}!"
+		puts "Congratulations #{name}! You won $#{bet.to_s}!"
 	end
 
 	def print_insurance
@@ -122,7 +121,11 @@ class UI
 	end
 
 	def print_blackjack
-		puts "You have a Blackjack! Your payoff increases to 3:2."
+		print "BLACKJACK! Your payoff increases to 3:2.\n\n"
+	end
+
+	def print_limit(player)
+		print "Congratulations #{player.name}! You're unbeatable now!\n\n"
 	end
 
 	def print_dealerbust(name)
@@ -141,6 +144,19 @@ class UI
 		puts "#{player_name}, it seems like you're out of cash."
 		puts "Our loan shark, #{shark_name} will be happy to lend you $#{cash.to_s}."
 		print "Use them well!\n\n"
+	end
+
+	def prompt_new_game?
+		print "\n\nGame for another bet?\n"
+		print "anything for yes, n for no\n"
+		new_game = true
+
+		if (gets.chomp.eql? "n")
+			false
+		end
+
+		print "\n\n\n"
+		new_game
 	end
 
 end
