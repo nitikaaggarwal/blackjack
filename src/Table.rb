@@ -156,6 +156,11 @@ private
 					when "h"
 						card = @deck.pick
 						playing_first_hand ? player.deal(card) : player.split_deal(card)
+						if (playing_first_hand and (player.hand_value == @BustLimit))
+							player.stand!
+						elsif (playing_second_hand and (player.split_hand_value == @BustLimit))
+							player.split_stand!
+						end
 					when "s"
 						playing_first_hand ? player.stand! : player.split_stand!
 					when "d"
@@ -179,6 +184,11 @@ private
 			# have just decided to split
 			@ui.print_card(card.type) if !card.nil? and !just_split
 
+			# special case of stand
+			if ((playing_first_hand and player.standing?) or (playing_second_hand and player.split_standing?))
+				playing_first_hand ? @ui.print_stand(player.name, player.hand_value) : @ui.print_stand(player.name, player.split_hand_value)
+			end
+
 			# check if user just split
 			if just_split
 				@ui.print_split(card.type,split_card.type)
@@ -186,12 +196,11 @@ private
 			elsif ((playing_first_hand and player.blackjack?) or (playing_second_hand and player.split_blackjack?))
 				@ui.print_blackjack
 			# check if user just hit the BustLimit
-			elsif((playing_first_hand and player.hand_value == @BustLimit) or (playing_second_hand and player.split_hand_value == @BustLimit))
+			elsif ((playing_first_hand and player.hand_value == @BustLimit) or (playing_second_hand and player.split_hand_value == @BustLimit))
 				@ui.print_limit(player.name)
 			elsif ((playing_first_hand and player.busted?) or (playing_second_hand and player.split_busted?))
 				@ui.print_busted(player.name, player.hand_value)
 			elsif ((playing_first_hand and player.standing? and !player.split?) or (playing_second_hand and player.split_standing?))
-				playing_first_hand ? @ui.print_stand(player.name, player.hand_value) : @ui.print_stand(player.name, player.split_hand_value)
 				break
 			end
 
