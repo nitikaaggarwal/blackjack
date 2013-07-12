@@ -1728,7 +1728,7 @@ true iff user has sufficient balance to split
       <pre class="code"><span class="info file"># File 'src/Player.rb', line 69</span>
 
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_can_split? fid id'>can_split?</span>
-  <span class='rubyid_if if kw'>if</span> <span class='lparen token'>(</span><span class='rubyid_hand identifier id'>hand</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span> <span class='eq op'>==</span> <span class='integer val'>2</span> <span class='rubyid_and and kw'>and</span> <span class='rubyid_hand identifier id'>hand</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_value identifier id'>value</span> <span class='eq op'>==</span> <span class='rubyid_hand identifier id'>hand</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_value identifier id'>value</span><span class='rparen token'>)</span>
+  <span class='rubyid_if if kw'>if</span> <span class='lparen token'>(</span><span class='notop op'>!</span><span class='rubyid_@is_split ivar id'>@is_split</span> <span class='rubyid_and and kw'>and</span> <span class='rubyid_@hand ivar id'>@hand</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span> <span class='eq op'>==</span> <span class='integer val'>2</span> <span class='rubyid_and and kw'>and</span> <span class='rubyid_@hand ivar id'>@hand</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_value identifier id'>value</span> <span class='eq op'>==</span> <span class='rubyid_@hand ivar id'>@hand</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_value identifier id'>value</span><span class='rparen token'>)</span>
     <span class='rubyid_true true kw'>true</span>
   <span class='rubyid_else else kw'>else</span>
     <span class='rubyid_false false kw'>false</span>
@@ -3219,7 +3219,7 @@ Payoff for current main bet
 </div>
     
     <div id="footer">
-  Generated on Thu Jul 11 22:06:30 2013 by 
+  Generated on Thu Jul 11 23:31:01 2013 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.7.4 (ruby-1.8.7).
 </div>

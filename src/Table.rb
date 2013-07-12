@@ -110,6 +110,7 @@ private
 
 	end
 
+	# This function contains most of the complex logic for playing Blackjack
 	def play_with_player(player)
 
 		# enter loop if one of the following conditions is met:
@@ -117,13 +118,13 @@ private
 		# 2. player has split and is playing the second hand
 		while((!player.busted? and !player.standing?) or (player.split? and !player.split_busted? and !player.split_standing?))
 
-			playing_first_hand = !player.busted? and !player.standing?
-			playing_second_hand = !playing_first_hand and player.split? and !player.split_busted? and !player.split_standing?
+			playing_first_hand = (!player.busted? and !player.standing?)
+			playing_second_hand = (!playing_first_hand and player.split? and !player.split_busted? and !player.split_standing?)
 
 			# if user has split, inform which hand currently betting on
 			if (playing_first_hand and player.split? and player.hand.length == @InitCards)
 				@ui.print_first_split
-			elsif (playing_second_hand and player.split_hand == @InitCards)
+			elsif (playing_second_hand and player.split_hand.length == @InitCards)
 				@ui.print_second_split
 			end
 
@@ -137,11 +138,11 @@ private
 			# check for blackjack or full hand
 			# if you're playing the first hand
 			skip = false
-			if playing_first_hand and (@dealer.blackjack? or player.blackjack? or player.hand_value == @BustLimit)
+			if (playing_first_hand and (@dealer.blackjack? or player.blackjack? or player.hand_value == @BustLimit))
 				skip = true
 				player.stand!
-			# if you're playing the second hand TODO: the extra if may not be necessary
-			elsif playing_second_hand and (@dealer.blackjack? or player.split_blackjack? or player.split_hand_value == @BustLimit)
+			# if you're playing the second hand
+			elsif (playing_second_hand and (@dealer.blackjack? or player.split_blackjack? or player.split_hand_value == @BustLimit))
 				skip = true
 				player.split_stand!
 			end
@@ -169,7 +170,6 @@ private
 						player.deal(card)
 						player.split_deal(split_card)
 						just_split = true
-					else
 				end # end case
 			end
 
@@ -190,8 +190,8 @@ private
 				@ui.print_limit(player.name)
 			elsif ((playing_first_hand and player.busted?) or (playing_second_hand and player.split_busted?))
 				@ui.print_busted(player.name, player.hand_value)
-			elsif ((playing_first_hand and player.standing?) or (playing_second_hand and player.split_standing?))
-				@ui.print_stand(player.name, player.hand_value)
+			elsif ((playing_first_hand and player.standing? and !player.split?) or (playing_second_hand and player.split_standing?))
+				playing_first_hand ? @ui.print_stand(player.name, player.hand_value) : @ui.print_stand(player.name, player.split_hand_value)
 				break
 			end
 
@@ -303,8 +303,10 @@ private
 
 	# convey player winnings to the UI
 	def ui_player_results(player,winnings)
-		if (winnings == 0)
+		if (winnings == 0 && !player.split?)
 			@ui.print_push(player.name)
+		elsif (player.split?)
+			@ui.print_split_winnings(player.name,winnings)
 		elsif (winnings < 0)
 			@ui.print_lose(player.name, winnings)
 		else

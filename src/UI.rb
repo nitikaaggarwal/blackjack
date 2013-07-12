@@ -296,4 +296,12 @@ class UI
 		print "It's your dealer, #{name}'s turn now!\n\n"
 	end
 
+	# Prints a message showing total winnings to player with split hand
+	# @param name [String] Name of player
+	# @param winnings [Integer] Combined winnings on both hands
+	# @return [nil]
+	def print_split_winnings(name,winnings)
+		print "#{name}, total winnings on your split hand are: $#{winnings.to_s}\n\n"
+	end
+
 end
