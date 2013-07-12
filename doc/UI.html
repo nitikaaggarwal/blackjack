@@ -1,0 +1,2986 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: UI
+  
+    &mdash; Documentation by YARD 0.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '';
+  if (relpath != '') relpath += '/';
+</script>
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (U)</a> &raquo; 
+    
+    
+    <span class="title">UI</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: UI
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">UI</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">src/UI.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+This class contains methods that allow a <span class='object_link'><a href="Table.html" title="Table (class)">Table</a></span> object to write game
+progress to the console. I call it the pretty-print class
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Author:</h3>
+<ul class="author">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>
+Nitika Aggarwal
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_balance-instance_method" title="#print_balance (instance method)">- (nil) <strong>print_balance</strong>(balance) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prints balance with user.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_blackjack-instance_method" title="#print_blackjack (instance method)">- (nil) <strong>print_blackjack</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prints a message if player gets a Blackjack.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_busted-instance_method" title="#print_busted (instance method)">- (nil) <strong>print_busted</strong>(name, value) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prints a busted message for player.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_card-instance_method" title="#print_card (instance method)">- (nil) <strong>print_card</strong>(card_type) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prints the current card.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_dealer_blackjack-instance_method" title="#print_dealer_blackjack (instance method)">- (nil) <strong>print_dealer_blackjack</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prints message when dealer gets a Blackjack.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_dealer_bust-instance_method" title="#print_dealer_bust (instance method)">- (nil) <strong>print_dealer_bust</strong>(name) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prints message if dealer goes bust.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_dealer_turn-instance_method" title="#print_dealer_turn (instance method)">- (nil) <strong>print_dealer_turn</strong>(name) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prints a message indicating that it&#8217;s now the dealer&#8217;s turn to
+play.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_exit-instance_method" title="#print_exit (instance method)">- (nil) <strong>print_exit</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prints message before game exits.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_first_split-instance_method" title="#print_first_split (instance method)">- (nil) <strong>print_first_split</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prints that player is playing for first split.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_hand-instance_method" title="#print_hand (instance method)">- (nil) <strong>print_hand</strong>(name, hand, hand_value) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prints the hand of the player.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_insurance-instance_method" title="#print_insurance (instance method)">- (nil) <strong>print_insurance</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prints message indicating player payoff has increased if the dealer has
+received an Ace as the upcard.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_limit-instance_method" title="#print_limit (instance method)">- (nil) <strong>print_limit</strong>(name) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prints a message if current hand value of player is 21.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_lose-instance_method" title="#print_lose (instance method)">- (nil) <strong>print_lose</strong>(name, bet) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prints a message when player loses.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_nobalance-instance_method" title="#print_nobalance (instance method)">- (nil) <strong>print_nobalance</strong>(player_name, shark_name, cash) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prints message when a player runs out of cash.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_push-instance_method" title="#print_push (instance method)">- (nil) <strong>print_push</strong>(name) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prints message when the bet ends in a push.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_second_split-instance_method" title="#print_second_split (instance method)">- (nil) <strong>print_second_split</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prints that player is playing for the second split.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_split-instance_method" title="#print_split (instance method)">- (nil) <strong>print_split</strong>(card_type, split_card_type) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prints a message when player decides to split.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_stand-instance_method" title="#print_stand (instance method)">- (nil) <strong>print_stand</strong>(name, value) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prints a message when player decided to stand.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_upcard-instance_method" title="#print_upcard (instance method)">- (nil) <strong>print_upcard</strong>(cardtype, value) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prints message that displays the dealer&#8217;s upcard.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_win-instance_method" title="#print_win (instance method)">- (nil) <strong>print_win</strong>(name, bet) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prints a message when player wins.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#prompt_bet-instance_method" title="#prompt_bet (instance method)">- (Integer) <strong>prompt_bet</strong>(player_name, max_bet) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prompts the player to enter bet for current round.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#prompt_cash-instance_method" title="#prompt_cash (instance method)">- (Integer) <strong>prompt_cash</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prompts the player to enter the starting cash for each player for the
+entire game.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#prompt_new_game%3F-instance_method" title="#prompt_new_game? (instance method)">- (Boolean) <strong>prompt_new_game?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prompts player if they want to start a new round.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#prompt_num_players-instance_method" title="#prompt_num_players (instance method)">- (Integer) <strong>prompt_num_players</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prompts for the number of players in the game.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#prompt_options-instance_method" title="#prompt_options (instance method)">- (String) <strong>prompt_options</strong>(double, split) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prompts player with options for the current hand.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#welcome-instance_method" title="#welcome (instance method)">- (nil) <strong>welcome</strong>(dealer_name) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Prints the welcome message.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="print_balance-instance_method">
+  
+    - (<tt>nil</tt>) <strong>print_balance</strong>(balance) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Prints balance with user
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>balance</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Current user balance
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+178
+179
+180</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/UI.rb', line 178</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_print_balance identifier id'>print_balance</span><span class='lparen token'>(</span><span class='rubyid_balance identifier id'>balance</span><span class='rparen token'>)</span>
+  <span class='rubyid_print identifier id'>print</span> <span class='dstring node'>&quot;You now have $#{balance.to_s} remaining\n\n&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="print_blackjack-instance_method">
+  
+    - (<tt>nil</tt>) <strong>print_blackjack</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Prints a message if player gets a Blackjack
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+206
+207
+208</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/UI.rb', line 206</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_print_blackjack identifier id'>print_blackjack</span>
+  <span class='rubyid_print identifier id'>print</span> <span class='string val'>&quot;BLACKJACK! Your payoff increases to 3:2 unless dealer gets one too.\n\n&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="print_busted-instance_method">
+  
+    - (<tt>nil</tt>) <strong>print_busted</strong>(name, value) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Prints a busted message for player
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Name of player
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Value of hand
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+154
+155
+156</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/UI.rb', line 154</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_print_busted identifier id'>print_busted</span><span class='lparen token'>(</span><span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span><span class='rubyid_value identifier id'>value</span><span class='rparen token'>)</span>
+  <span class='rubyid_print identifier id'>print</span> <span class='dstring node'>&quot;Tough luck, #{name}. You got busted with a score: #{value}\n\n&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="print_card-instance_method">
+  
+    - (<tt>nil</tt>) <strong>print_card</strong>(card_type) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Prints the current card
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>card_type</span>
+      
+      
+        <span class='type'>(<tt>Constant</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The type of card
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+146
+147
+148</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/UI.rb', line 146</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_print_card identifier id'>print_card</span><span class='lparen token'>(</span><span class='rubyid_card_type identifier id'>card_type</span><span class='rparen token'>)</span>
+  <span class='rubyid_puts identifier id'>puts</span> <span class='dstring node'>&quot;You were dealt: #{card_type}&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="print_dealer_blackjack-instance_method">
+  
+    - (<tt>nil</tt>) <strong>print_dealer_blackjack</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Prints message when dealer gets a Blackjack
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+288
+289
+290</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/UI.rb', line 288</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_print_dealer_blackjack identifier id'>print_dealer_blackjack</span>
+  <span class='rubyid_print identifier id'>print</span> <span class='string val'>&quot;Your dealer got a BLACKJACK! You could be in trouble now!\n\n&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="print_dealer_bust-instance_method">
+  
+    - (<tt>nil</tt>) <strong>print_dealer_bust</strong>(name) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Prints message if dealer goes bust
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Name of dealer
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+220
+221
+222</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/UI.rb', line 220</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_print_dealer_bust identifier id'>print_dealer_bust</span><span class='lparen token'>(</span><span class='rubyid_name identifier id'>name</span><span class='rparen token'>)</span>
+  <span class='rubyid_print identifier id'>print</span> <span class='dstring node'>&quot;THE DEALER GOT BUSTED! Let's check if #{name} owes you.\n\n&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="print_dealer_turn-instance_method">
+  
+    - (<tt>nil</tt>) <strong>print_dealer_turn</strong>(name) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Prints a message indicating that it&#8217;s now the dealer&#8217;s turn to
+play
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Name of the dealer
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+295
+296
+297</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/UI.rb', line 295</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_print_dealer_turn identifier id'>print_dealer_turn</span><span class='lparen token'>(</span><span class='rubyid_name identifier id'>name</span><span class='rparen token'>)</span>
+  <span class='rubyid_print identifier id'>print</span> <span class='dstring node'>&quot;It's your dealer, #{name}'s turn now!\n\n&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="print_exit-instance_method">
+  
+    - (<tt>nil</tt>) <strong>print_exit</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Prints message before game exits
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+234
+235
+236</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/UI.rb', line 234</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_print_exit identifier id'>print_exit</span>
+  <span class='rubyid_print identifier id'>print</span> <span class='string val'>&quot;\n\nExiting game. Avada Kedavra!\n\n&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="print_first_split-instance_method">
+  
+    - (<tt>nil</tt>) <strong>print_first_split</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Prints that player is playing for first split
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+276
+277
+278</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/UI.rb', line 276</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_print_first_split identifier id'>print_first_split</span>
+  <span class='rubyid_print identifier id'>print</span> <span class='string val'>&quot;**** Playing first split ****\n\n&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="print_hand-instance_method">
+  
+    - (<tt>nil</tt>) <strong>print_hand</strong>(name, hand, hand_value) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Prints the hand of the player
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Name of the player
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>hand</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Card.html" title="Card (class)">Card</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The hand of the player
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>hand_value</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Value of the hand
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/UI.rb', line 46</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_print_hand identifier id'>print_hand</span> <span class='lparen token'>(</span><span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span><span class='rubyid_hand identifier id'>hand</span><span class='comma token'>,</span><span class='rubyid_hand_value identifier id'>hand_value</span><span class='rparen token'>)</span>
+
+  <span class='rubyid_puts identifier id'>puts</span> <span class='dstring node'>&quot;#{name}, your cards are:&quot;</span>
+  <span class='rubyid_hand identifier id'>hand</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='rubyid_card identifier id'>card</span><span class='bitor op'>|</span>
+    <span class='rubyid_puts identifier id'>puts</span> <span class='rubyid_card identifier id'>card</span><span class='dot token'>.</span><span class='rubyid_type identifier id'>type</span>
+  <span class='rbrace token'>}</span>
+  <span class='rubyid_puts identifier id'>puts</span> <span class='dstring node'>&quot;current hand value: #{hand_value.to_s}&quot;</span>
+  <span class='rubyid_puts identifier id'>puts</span> <span class='string val'>&quot;&quot;</span>
+
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="print_insurance-instance_method">
+  
+    - (<tt>nil</tt>) <strong>print_insurance</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Prints message indicating player payoff has increased if the dealer has
+received an Ace as the upcard
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+200
+201
+202</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/UI.rb', line 200</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_print_insurance identifier id'>print_insurance</span>
+  <span class='rubyid_puts identifier id'>puts</span> <span class='string val'>&quot;The face card of dealer was an Ace! You get insurance on your payoff at 2:1.&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="print_limit-instance_method">
+  
+    - (<tt>nil</tt>) <strong>print_limit</strong>(name) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Prints a message if current hand value of player is 21
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Name of player
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+213
+214
+215</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/UI.rb', line 213</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_print_limit identifier id'>print_limit</span><span class='lparen token'>(</span><span class='rubyid_name identifier id'>name</span><span class='rparen token'>)</span>
+  <span class='rubyid_print identifier id'>print</span> <span class='dstring node'>&quot;Congratulations #{name}! You're unbeatable now!\n\n&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="print_lose-instance_method">
+  
+    - (<tt>nil</tt>) <strong>print_lose</strong>(name, bet) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Prints a message when player loses
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Name of player
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>bet</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Bet value lost
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+170
+171
+172
+173</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/UI.rb', line 170</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_print_lose identifier id'>print_lose</span><span class='lparen token'>(</span><span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span><span class='rubyid_bet identifier id'>bet</span><span class='rparen token'>)</span>
+  <span class='rubyid_bet identifier id'>bet</span> <span class='assign token'>=</span> <span class='minus op'>-</span><span class='rubyid_bet identifier id'>bet</span>
+  <span class='rubyid_puts identifier id'>puts</span> <span class='dstring node'>&quot;#{name}, you lost $#{bet.to_s}&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="print_nobalance-instance_method">
+  
+    - (<tt>nil</tt>) <strong>print_nobalance</strong>(player_name, shark_name, cash) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Prints message when a player runs out of cash
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>player_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Name of the player
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>shark_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Name of the loan shark
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>cash</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Cash lent by loan shark
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+243
+244
+245
+246
+247</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/UI.rb', line 243</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_print_nobalance identifier id'>print_nobalance</span><span class='lparen token'>(</span><span class='rubyid_player_name identifier id'>player_name</span><span class='comma token'>,</span> <span class='rubyid_shark_name identifier id'>shark_name</span><span class='comma token'>,</span> <span class='rubyid_cash identifier id'>cash</span><span class='rparen token'>)</span>
+  <span class='rubyid_puts identifier id'>puts</span> <span class='dstring node'>&quot;#{player_name}, it seems like you're out of cash.&quot;</span>
+  <span class='rubyid_puts identifier id'>puts</span> <span class='dstring node'>&quot;Our loan shark, #{shark_name} will be happy to lend you $#{cash.to_s}.&quot;</span>
+  <span class='rubyid_print identifier id'>print</span> <span class='string val'>&quot;Use them well!\n\n&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="print_push-instance_method">
+  
+    - (<tt>nil</tt>) <strong>print_push</strong>(name) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Prints message when the bet ends in a push
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Name of player
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+185
+186
+187</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/UI.rb', line 185</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_print_push identifier id'>print_push</span><span class='lparen token'>(</span><span class='rubyid_name identifier id'>name</span><span class='rparen token'>)</span>
+  <span class='rubyid_puts identifier id'>puts</span> <span class='dstring node'>&quot;#{name}, your game ended in a push.&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="print_second_split-instance_method">
+  
+    - (<tt>nil</tt>) <strong>print_second_split</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Prints that player is playing for the second split
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+282
+283
+284</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/UI.rb', line 282</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_print_second_split identifier id'>print_second_split</span>
+  <span class='rubyid_print identifier id'>print</span> <span class='string val'>&quot;**** Playing second split ****\n\n&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="print_split-instance_method">
+  
+    - (<tt>nil</tt>) <strong>print_split</strong>(card_type, split_card_type) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Prints a message when player decides to split
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>card_type</span>
+      
+      
+        <span class='type'>(<tt>Constant</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Card type dealt to first hand
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>split_card_type</span>
+      
+      
+        <span class='type'>(<tt>Constant</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Card type dealt to second hand
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+268
+269
+270
+271
+272</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/UI.rb', line 268</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_print_split identifier id'>print_split</span><span class='lparen token'>(</span><span class='rubyid_card_type identifier id'>card_type</span><span class='comma token'>,</span> <span class='rubyid_split_card_type identifier id'>split_card_type</span><span class='rparen token'>)</span>
+  <span class='rubyid_puts identifier id'>puts</span> <span class='string val'>&quot;You decided to split.&quot;</span>
+  <span class='rubyid_puts identifier id'>puts</span> <span class='dstring node'>&quot;You were dealt #{card_type} for the first hand&quot;</span>
+  <span class='rubyid_print identifier id'>print</span> <span class='dstring node'>&quot;You were dealt #{split_card_type} for the second hand\n\n&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="print_stand-instance_method">
+  
+    - (<tt>nil</tt>) <strong>print_stand</strong>(name, value) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Prints a message when player decided to stand
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Name of player
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Value of hand
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+162
+163
+164</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/UI.rb', line 162</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_print_stand identifier id'>print_stand</span><span class='lparen token'>(</span><span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span><span class='rubyid_value identifier id'>value</span><span class='rparen token'>)</span>
+  <span class='rubyid_print identifier id'>print</span> <span class='dstring node'>&quot;#{name}, you are now standing at: #{value}\n\n&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="print_upcard-instance_method">
+  
+    - (<tt>nil</tt>) <strong>print_upcard</strong>(cardtype, value) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Prints message that displays the dealer&#8217;s upcard
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>cardtype</span>
+      
+      
+        <span class='type'>(<tt>Constant</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The type of card
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Value of the upcard
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+228
+229
+230</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/UI.rb', line 228</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_print_upcard identifier id'>print_upcard</span><span class='lparen token'>(</span><span class='rubyid_cardtype identifier id'>cardtype</span><span class='comma token'>,</span><span class='rubyid_value identifier id'>value</span><span class='rparen token'>)</span>
+  <span class='rubyid_print identifier id'>print</span> <span class='dstring node'>&quot;The dealer's upcard is: #{cardtype} valued at #{value.to_s}\n\n&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="print_win-instance_method">
+  
+    - (<tt>nil</tt>) <strong>print_win</strong>(name, bet) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Prints a message when player wins
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Name of player
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>bet</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Winning bet amount
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+193
+194
+195</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/UI.rb', line 193</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_print_win identifier id'>print_win</span><span class='lparen token'>(</span><span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span><span class='rubyid_bet identifier id'>bet</span><span class='rparen token'>)</span>
+  <span class='rubyid_puts identifier id'>puts</span> <span class='dstring node'>&quot;Congratulations #{name}! You won $#{bet.to_s}!&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="prompt_bet-instance_method">
+  
+    - (<tt>Integer</tt>) <strong>prompt_bet</strong>(player_name, max_bet) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Prompts the player to enter bet for current round
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>player_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Name of player
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>max_bet</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Maximum bettable amount
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Bet amount
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/UI.rb', line 83</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_prompt_bet identifier id'>prompt_bet</span><span class='lparen token'>(</span><span class='rubyid_player_name identifier id'>player_name</span><span class='comma token'>,</span> <span class='rubyid_max_bet identifier id'>max_bet</span><span class='rparen token'>)</span>
+  <span class='rubyid_bet identifier id'>bet</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+  <span class='rubyid_begin begin kw'>begin</span>
+    <span class='rubyid_puts identifier id'>puts</span> <span class='string val'>&quot;Enter a positive integral bet for &quot;</span> <span class='plus op'>+</span> <span class='rubyid_player_name identifier id'>player_name</span> <span class='plus op'>+</span> <span class='string val'>&quot; no more than $&quot;</span> <span class='plus op'>+</span> <span class='rubyid_max_bet identifier id'>max_bet</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span>
+    <span class='rubyid_inputstring identifier id'>inputstring</span> <span class='assign token'>=</span> <span class='rubyid_gets identifier id'>gets</span><span class='dot token'>.</span><span class='rubyid_chomp identifier id'>chomp</span>
+    <span class='rubyid_raise identifier id'>raise</span> <span class='rubyid_ArgumentError constant id'>ArgumentError</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_Integer constant id'>Integer</span><span class='lparen token'>(</span><span class='rubyid_bet identifier id'>bet</span><span class='rparen token'>)</span> <span class='neq op'>!=</span> <span class='rubyid_nil nil kw'>nil</span>
+    <span class='rubyid_bet identifier id'>bet</span> <span class='assign token'>=</span> <span class='rubyid_Integer constant id'>Integer</span><span class='lparen token'>(</span><span class='rubyid_inputstring identifier id'>inputstring</span><span class='rparen token'>)</span>
+    <span class='rubyid_raise identifier id'>raise</span> <span class='rubyid_RangeError constant id'>RangeError</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='lparen token'>(</span><span class='rubyid_bet identifier id'>bet</span> <span class='leq op'>&lt;=</span> <span class='rubyid_max_bet identifier id'>max_bet</span> <span class='rubyid_and and kw'>and</span> <span class='rubyid_bet identifier id'>bet</span> <span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='rparen token'>)</span>
+  <span class='rubyid_rescue rescue kw'>rescue</span> <span class='rubyid_RangeError constant id'>RangeError</span>
+    <span class='rubyid_puts identifier id'>puts</span> <span class='string val'>&quot;Your bet must be positive and no more than total balance&quot;</span>
+    <span class='rubyid_retry retry kw'>retry</span>
+  <span class='rubyid_rescue rescue kw'>rescue</span> <span class='rubyid_ArgumentError constant id'>ArgumentError</span>
+    <span class='rubyid_puts identifier id'>puts</span> <span class='string val'>&quot;I know you're drunk but bets can only be integers.&quot;</span>
+    <span class='rubyid_retry retry kw'>retry</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_puts identifier id'>puts</span> <span class='string val'>&quot;&quot;</span>
+  <span class='rubyid_bet identifier id'>bet</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="prompt_cash-instance_method">
+  
+    - (<tt>Integer</tt>) <strong>prompt_cash</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Prompts the player to enter the starting cash for each player for the
+entire game
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Starting cash for each player. Must be positive.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/UI.rb', line 60</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_prompt_cash identifier id'>prompt_cash</span>
+  <span class='rubyid_cash identifier id'>cash</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+  <span class='rubyid_begin begin kw'>begin</span>
+    <span class='rubyid_puts identifier id'>puts</span> <span class='string val'>&quot;Please enter initial cash&quot;</span>
+    <span class='rubyid_inputstring identifier id'>inputstring</span> <span class='assign token'>=</span> <span class='rubyid_gets identifier id'>gets</span><span class='dot token'>.</span><span class='rubyid_chomp identifier id'>chomp</span>
+    <span class='rubyid_raise identifier id'>raise</span> <span class='rubyid_ArgumentError constant id'>ArgumentError</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_Integer constant id'>Integer</span><span class='lparen token'>(</span><span class='rubyid_inputstring identifier id'>inputstring</span><span class='rparen token'>)</span> <span class='neq op'>!=</span> <span class='rubyid_nil nil kw'>nil</span>
+    <span class='rubyid_cash identifier id'>cash</span> <span class='assign token'>=</span> <span class='rubyid_Integer constant id'>Integer</span><span class='lparen token'>(</span><span class='rubyid_inputstring identifier id'>inputstring</span><span class='rparen token'>)</span>
+    <span class='rubyid_raise identifier id'>raise</span> <span class='rubyid_RangeError constant id'>RangeError</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='lparen token'>(</span><span class='rubyid_cash identifier id'>cash</span> <span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='rparen token'>)</span>
+  <span class='rubyid_rescue rescue kw'>rescue</span> <span class='rubyid_RangeError constant id'>RangeError</span>
+    <span class='rubyid_puts identifier id'>puts</span> <span class='string val'>&quot;Starting cash must be positive&quot;</span>
+    <span class='rubyid_retry retry kw'>retry</span>
+  <span class='rubyid_rescue rescue kw'>rescue</span> <span class='rubyid_ArgumentError constant id'>ArgumentError</span>
+    <span class='rubyid_puts identifier id'>puts</span> <span class='string val'>&quot;Cash must be a positive integer&quot;</span>
+    <span class='rubyid_retry retry kw'>retry</span>
+  <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_puts identifier id'>puts</span> <span class='string val'>&quot;&quot;</span>
+  <span class='rubyid_cash identifier id'>cash</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="prompt_new_game?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>prompt_new_game?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Prompts player if they want to start a new round
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+true iff player wants a new round
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/UI.rb', line 251</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_prompt_new_game? fid id'>prompt_new_game?</span>
+  <span class='rubyid_print identifier id'>print</span> <span class='string val'>&quot;\n\nGame for another bet?\n&quot;</span>
+  <span class='rubyid_print identifier id'>print</span> <span class='string val'>&quot;anything for yes, n for no\n&quot;</span>
+  <span class='rubyid_new_game identifier id'>new_game</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span>
+
+  <span class='rubyid_if if kw'>if</span> <span class='lparen token'>(</span><span class='rubyid_gets identifier id'>gets</span><span class='dot token'>.</span><span class='rubyid_chomp identifier id'>chomp</span><span class='dot token'>.</span><span class='rubyid_eql? fid id'>eql?</span> <span class='string val'>&quot;n&quot;</span><span class='rparen token'>)</span>
+    <span class='rubyid_false false kw'>false</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_print identifier id'>print</span> <span class='string val'>&quot;\n\n\n&quot;</span>
+  <span class='rubyid_new_game identifier id'>new_game</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="prompt_num_players-instance_method">
+  
+    - (<tt>Integer</tt>) <strong>prompt_num_players</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Prompts for the number of players in the game
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Number of players on the table. Must be positive.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/UI.rb', line 22</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_prompt_num_players identifier id'>prompt_num_players</span>
+  <span class='rubyid_num_players identifier id'>num_players</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+  <span class='rubyid_begin begin kw'>begin</span>
+    <span class='rubyid_puts identifier id'>puts</span> <span class='string val'>&quot;Please enter number of players:&quot;</span>
+    <span class='rubyid_inputstring identifier id'>inputstring</span> <span class='assign token'>=</span> <span class='rubyid_gets identifier id'>gets</span><span class='dot token'>.</span><span class='rubyid_chomp identifier id'>chomp</span>
+    <span class='rubyid_raise identifier id'>raise</span> <span class='rubyid_ArgumentError constant id'>ArgumentError</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_Integer constant id'>Integer</span><span class='lparen token'>(</span><span class='rubyid_inputstring identifier id'>inputstring</span><span class='rparen token'>)</span> <span class='neq op'>!=</span> <span class='rubyid_nil nil kw'>nil</span>
+    <span class='rubyid_num_players identifier id'>num_players</span> <span class='assign token'>=</span> <span class='rubyid_Integer constant id'>Integer</span><span class='lparen token'>(</span><span class='rubyid_inputstring identifier id'>inputstring</span><span class='rparen token'>)</span>
+    <span class='rubyid_raise identifier id'>raise</span> <span class='rubyid_RangeError constant id'>RangeError</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='lparen token'>(</span><span class='rubyid_num_players identifier id'>num_players</span> <span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='rparen token'>)</span>
+  <span class='rubyid_rescue rescue kw'>rescue</span> <span class='rubyid_RangeError constant id'>RangeError</span>
+    <span class='rubyid_puts identifier id'>puts</span> <span class='string val'>&quot;Must have at least one player&quot;</span>
+    <span class='rubyid_retry retry kw'>retry</span>
+  <span class='rubyid_rescue rescue kw'>rescue</span> <span class='rubyid_ArgumentError constant id'>ArgumentError</span>
+    <span class='rubyid_puts identifier id'>puts</span> <span class='string val'>&quot;Number of players must be a positive integer&quot;</span>
+    <span class='rubyid_retry retry kw'>retry</span>
+  <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_puts identifier id'>puts</span> <span class='string val'>&quot;&quot;</span>
+  <span class='rubyid_num_players identifier id'>num_players</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="prompt_options-instance_method">
+  
+    - (<tt>String</tt>) <strong>prompt_options</strong>(double, split) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Prompts player with options for the current hand
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>double</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+true iff player is allowed to double bet
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>split</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+true iff player is allowed to split bet
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The string code for the option chosen. It is either h (hit), s (stand), d
+(double) or t (split).
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/UI.rb', line 107</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_prompt_options identifier id'>prompt_options</span><span class='lparen token'>(</span><span class='rubyid_double identifier id'>double</span><span class='comma token'>,</span> <span class='rubyid_split identifier id'>split</span><span class='rparen token'>)</span>
+
+  <span class='comment val'># figure out options to present</span>
+  <span class='rubyid_options_string identifier id'>options_string</span> <span class='assign token'>=</span> <span class='string val'>&quot;h - hit, s - stand&quot;</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_double identifier id'>double</span>
+    <span class='rubyid_options_string identifier id'>options_string</span> <span class='assign token'>=</span> <span class='rubyid_options_string identifier id'>options_string</span> <span class='plus op'>+</span> <span class='string val'>&quot;, d - double&quot;</span>
+  <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_split identifier id'>split</span>
+    <span class='rubyid_options_string identifier id'>options_string</span> <span class='assign token'>=</span> <span class='rubyid_options_string identifier id'>options_string</span> <span class='plus op'>+</span> <span class='string val'>&quot;, t - split&quot;</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_begin begin kw'>begin</span>
+    <span class='comment val'># prompt the user</span>
+    <span class='rubyid_puts identifier id'>puts</span> <span class='rubyid_options_string identifier id'>options_string</span>
+
+    <span class='comment val'># get option</span>
+    <span class='rubyid_op identifier id'>op</span> <span class='assign token'>=</span> <span class='rubyid_gets identifier id'>gets</span><span class='dot token'>.</span><span class='rubyid_chomp identifier id'>chomp</span>
+
+    <span class='comment val'># return value</span>
+    <span class='rubyid_retval identifier id'>retval</span> <span class='assign token'>=</span> <span class='string val'>&quot;&quot;</span>
+
+    <span class='comment val'># check for valid input</span>
+    <span class='rubyid_if if kw'>if</span> <span class='lparen token'>(</span><span class='rubyid_op identifier id'>op</span><span class='dot token'>.</span><span class='rubyid_eql? fid id'>eql?</span> <span class='string val'>&quot;h&quot;</span> <span class='rubyid_or or kw'>or</span> <span class='rubyid_op identifier id'>op</span><span class='dot token'>.</span><span class='rubyid_eql? fid id'>eql?</span> <span class='string val'>&quot;s&quot;</span> <span class='rubyid_or or kw'>or</span> <span class='lparen token'>(</span><span class='rubyid_op identifier id'>op</span><span class='dot token'>.</span><span class='rubyid_eql? fid id'>eql?</span> <span class='string val'>&quot;d&quot;</span> <span class='rubyid_and and kw'>and</span> <span class='rubyid_double identifier id'>double</span><span class='rparen token'>)</span> <span class='rubyid_or or kw'>or</span> <span class='lparen token'>(</span><span class='rubyid_op identifier id'>op</span><span class='dot token'>.</span><span class='rubyid_eql? fid id'>eql?</span> <span class='string val'>&quot;t&quot;</span> <span class='rubyid_and and kw'>and</span> <span class='rubyid_split identifier id'>split</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+      <span class='rubyid_retval identifier id'>retval</span> <span class='assign token'>=</span> <span class='rubyid_op identifier id'>op</span>
+    <span class='rubyid_else else kw'>else</span>
+      <span class='rubyid_raise identifier id'>raise</span> <span class='rubyid_ArgumentError constant id'>ArgumentError</span><span class='comma token'>,</span> <span class='string val'>&quot;Bummer! Choose from the options below&quot;</span>
+    <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_rescue rescue kw'>rescue</span>
+    <span class='rubyid_puts identifier id'>puts</span> <span class='string val'>&quot;Bummer! Choose from the options below&quot;</span>
+    <span class='rubyid_retry retry kw'>retry</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_retval identifier id'>retval</span>
+
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="welcome-instance_method">
+  
+    - (<tt>nil</tt>) <strong>welcome</strong>(dealer_name) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Prints the welcome message
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>dealer_name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Name of the dealer
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+14
+15
+16
+17
+18</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/UI.rb', line 14</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_welcome identifier id'>welcome</span><span class='lparen token'>(</span><span class='rubyid_dealer_name identifier id'>dealer_name</span><span class='rparen token'>)</span>
+  <span class='rubyid_puts identifier id'>puts</span> <span class='string val'>&quot;Welcome to Hog's Head, Muggles!&quot;</span>
+  <span class='rubyid_puts identifier id'>puts</span> <span class='dstring node'>&quot;Your dealer today is #{dealer_name}&quot;</span>
+  <span class='rubyid_puts identifier id'>puts</span> <span class='string val'>&quot;Good luck and happy gambling!\n\n&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Thu Jul 11 22:06:29 2013 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.7.4 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

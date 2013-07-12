@@ -1,0 +1,49 @@
+Thanks a lot for downloading!
+
+This is a commandline version of the Blackjack game
+tested and compatible with Ruby 1.8.7
+
+It implements basic features like Hit, Stand, Split and Double.
+The game initally prompts the user to select the number of
+players on the table and then for the starting cash which
+will be the same for each player.
+
+Then, it asks each player to enter the bet amount in a round-robin
+fashion. Finally, it plays Blackjack with each player, again, in
+a round-robin fashion. Once each player finishes the round, the
+dealer deals cards to itself, if needed and computes the winnings
+of each player depending on it's own and the player's hand values.
+
+When the round is over, it prompts if the user wants to play another
+round. In that case, all remaining balance for each player becomes
+the starting balance for the next round. Note that the number of
+players remains the same for each round and is only determined
+once, when the game is first started. Also, if a player runs out of
+cash, a loan shark restores the balance to the starting cash
+value.
+
+
+
+RUNNING
+
+Enter the src directory, and then typing
+
+	ruby Blackjack.rb
+
+on the command prompt should do the trick
+
+
+WARNING
+
+1. Has some subtle Harry Potter references that may not go down well
+with every user.
+2. This is my best work, given:
+   * I took 3 days to complete this code
+	 * I had no idea of how Blackjack is played
+	   and had to additionally learn the rules of
+		 the game within the 3 day period
+   * I was familiar with Ruby but was yet to
+	   write a serious program until this one
+
+
+Enjoy the game!

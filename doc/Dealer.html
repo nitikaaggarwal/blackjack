@@ -1,0 +1,672 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Dealer
+  
+    &mdash; Documentation by YARD 0.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '';
+  if (relpath != '') relpath += '/';
+</script>
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (D)</a> &raquo; 
+    
+    
+    <span class="title">Dealer</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Dealer
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><span class='object_link'><a href="Player.html" title="Player (class)">Player</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="Player.html" title="Player (class)">Player</a></span></li>
+          
+            <li class="next">Dealer</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">src/Dealer.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+This class represents a dealer in the game of Blackjack. It inherits
+functionalities from the <span class='object_link'><a href="Player.html" title="Player (class)">Player</a></span> class but hides unnecessary functions
+that are not required of a dealer. Additionally, it requires the <span class='object_link'><a href="Card.html" title="Card (class)">Card</a></span>
+class.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Author:</h3>
+<ul class="author">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>
+Nitika Aggarwal
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+  
+  
+  
+  
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#softlimit-instance_method" title="#softlimit (instance method)">- (Integer) <strong>softlimit</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+The soft dealer limit, typically 17.
+</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="Player.html" title="Player (class)">Player</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Player.html#balance-instance_method" title="Player#balance (method)">balance</a></span>, <span class='object_link'><a href="Player.html#bet-instance_method" title="Player#bet (method)">bet</a></span>, <span class='object_link'><a href="Player.html#hand-instance_method" title="Player#hand (method)">hand</a></span>, <span class='object_link'><a href="Player.html#name-instance_method" title="Player#name (method)">name</a></span>, <span class='object_link'><a href="Player.html#split_bet-instance_method" title="Player#split_bet (method)">split_bet</a></span>, <span class='object_link'><a href="Player.html#split_hand-instance_method" title="Player#split_hand (method)">split_hand</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Dealer) <strong>initialize</strong>(name, bustlimit, softlimit) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+The constructor.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#softlimit%3F-instance_method" title="#softlimit? (instance method)">- (Boolean) <strong>softlimit?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Check if reached softlimit.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#upcard-instance_method" title="#upcard (instance method)">- (Card<sup>?</sup>) <strong>upcard</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the dealer upcard unless hand is empty (should not happen).
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#upcard_ace%3F-instance_method" title="#upcard_ace? (instance method)">- (Boolean) <strong>upcard_ace?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Check if upcard is ACE to help detect insurance 3:2 payout.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Player.html" title="Player (class)">Player</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Player.html#blackjack%3F-instance_method" title="Player#blackjack? (method)">#blackjack?</a></span>, <span class='object_link'><a href="Player.html#busted%3F-instance_method" title="Player#busted? (method)">#busted?</a></span>, <span class='object_link'><a href="Player.html#can_double%3F-instance_method" title="Player#can_double? (method)">#can_double?</a></span>, <span class='object_link'><a href="Player.html#can_split%3F-instance_method" title="Player#can_split? (method)">#can_split?</a></span>, <span class='object_link'><a href="Player.html#can_split_double%3F-instance_method" title="Player#can_split_double? (method)">#can_split_double?</a></span>, <span class='object_link'><a href="Player.html#clear_hand%21-instance_method" title="Player#clear_hand! (method)">#clear_hand!</a></span>, <span class='object_link'><a href="Player.html#deal-instance_method" title="Player#deal (method)">#deal</a></span>, <span class='object_link'><a href="Player.html#hand_value-instance_method" title="Player#hand_value (method)">#hand_value</a></span>, <span class='object_link'><a href="Player.html#split%21-instance_method" title="Player#split! (method)">#split!</a></span>, <span class='object_link'><a href="Player.html#split%3F-instance_method" title="Player#split? (method)">#split?</a></span>, <span class='object_link'><a href="Player.html#split_blackjack%3F-instance_method" title="Player#split_blackjack? (method)">#split_blackjack?</a></span>, <span class='object_link'><a href="Player.html#split_busted%3F-instance_method" title="Player#split_busted? (method)">#split_busted?</a></span>, <span class='object_link'><a href="Player.html#split_deal-instance_method" title="Player#split_deal (method)">#split_deal</a></span>, <span class='object_link'><a href="Player.html#split_double%21-instance_method" title="Player#split_double! (method)">#split_double!</a></span>, <span class='object_link'><a href="Player.html#split_hand_value-instance_method" title="Player#split_hand_value (method)">#split_hand_value</a></span>, <span class='object_link'><a href="Player.html#split_lose%21-instance_method" title="Player#split_lose! (method)">#split_lose!</a></span>, <span class='object_link'><a href="Player.html#split_push%21-instance_method" title="Player#split_push! (method)">#split_push!</a></span>, <span class='object_link'><a href="Player.html#split_stand%21-instance_method" title="Player#split_stand! (method)">#split_stand!</a></span>, <span class='object_link'><a href="Player.html#split_standing%3F-instance_method" title="Player#split_standing? (method)">#split_standing?</a></span>, <span class='object_link'><a href="Player.html#split_win%21-instance_method" title="Player#split_win! (method)">#split_win!</a></span>, <span class='object_link'><a href="Player.html#stand%21-instance_method" title="Player#stand! (method)">#stand!</a></span>, <span class='object_link'><a href="Player.html#standing%3F-instance_method" title="Player#standing? (method)">#standing?</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Dealer (class)">Dealer</a></span></tt>) <strong>initialize</strong>(name, bustlimit, softlimit) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The constructor
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The name of the dealer
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>bustlimit</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The limit before dealer goes bust, typically 21
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>softlimit</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The soft limit of the dealer, typically 17
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+20
+21
+22
+23</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Dealer.rb', line 20</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span><span class='rubyid_bustlimit identifier id'>bustlimit</span><span class='comma token'>,</span><span class='rubyid_softlimit identifier id'>softlimit</span><span class='rparen token'>)</span>
+  <span class='rubyid_super super kw'>super</span><span class='lparen token'>(</span><span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span><span class='integer val'>0</span><span class='comma token'>,</span><span class='rubyid_bustlimit identifier id'>bustlimit</span><span class='rparen token'>)</span>
+  <span class='rubyid_@softlimit ivar id'>@softlimit</span> <span class='assign token'>=</span> <span class='rubyid_softlimit identifier id'>softlimit</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <span id="softlimit-instance_method"></span>
+      <div class="method_details first">
+  <p class="signature first" id="softlimit-instance_method">
+  
+    - (<tt>Integer</tt>) <strong>softlimit</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The soft dealer limit, typically 17
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The soft dealer limit, typically 17
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+14
+15
+16</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Dealer.rb', line 14</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_softlimit identifier id'>softlimit</span>
+  <span class='rubyid_@softlimit ivar id'>@softlimit</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="softlimit?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>softlimit?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Check if reached softlimit
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+true iff dealer has hit softlimit
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+34
+35
+36</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Dealer.rb', line 34</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_softlimit? fid id'>softlimit?</span>
+  <span class='rubyid_hand_value identifier id'>hand_value</span> <span class='geq op'>&gt;=</span> <span class='rubyid_softlimit identifier id'>softlimit</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="upcard-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Card.html" title="Card (class)">Card</a></span></tt><sup>?</sup>) <strong>upcard</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the dealer upcard unless hand is empty (should not happen)
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Card.html" title="Card (class)">Card</a></span></tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Dealer upcard unless hand is empty, in which case it returns nil
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+40
+41
+42
+43
+44
+45
+46</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Dealer.rb', line 40</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_upcard identifier id'>upcard</span>
+  <span class='rubyid_if if kw'>if</span> <span class='notop op'>!</span><span class='rubyid_hand identifier id'>hand</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span>
+    <span class='rubyid_hand identifier id'>hand</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span>
+  <span class='rubyid_else else kw'>else</span>
+    <span class='rubyid_nil nil kw'>nil</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="upcard_ace?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>upcard_ace?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Check if upcard is ACE to help detect insurance 3:2 payout
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+true iff upcard is ACE
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Dealer.rb', line 28</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_upcard_ace? fid id'>upcard_ace?</span>
+  <span class='notop op'>!</span><span class='rubyid_@hand ivar id'>@hand</span><span class='dot token'>.</span><span class='rubyid_empty? fid id'>empty?</span> <span class='rubyid_and and kw'>and</span> <span class='rubyid_@hand ivar id'>@hand</span><span class='dot token'>.</span><span class='rubyid_first identifier id'>first</span><span class='dot token'>.</span><span class='rubyid_type identifier id'>type</span> <span class='eq op'>==</span> <span class='symbol val'>:ACE</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Thu Jul 11 22:06:30 2013 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.7.4 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

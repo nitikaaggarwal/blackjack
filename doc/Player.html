@@ -1,0 +1,3228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Player
+  
+    &mdash; Documentation by YARD 0.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '';
+  if (relpath != '') relpath += '/';
+</script>
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (P)</a> &raquo; 
+    
+    
+    <span class="title">Player</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Player
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Player</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">src/Player.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+This class represents a player in the Blackjack game. A player has a main
+hand with which a normal game proceeds. It also has a split hand that
+should be populated when the player decides to split.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Author:</h3>
+<ul class="author">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'><p>
+Nitika Aggarwal
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="Dealer.html" title="Dealer (class)">Dealer</a></span></p>
+</div>
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#balance-instance_method" title="#balance (instance method)">- (Integer) <strong>balance</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+The balance left with player, excluding the current bet.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bet-instance_method" title="#bet (instance method)">- (Integer) <strong>bet</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+The current bet.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#hand-instance_method" title="#hand (instance method)">- (Array&lt;Card&gt;) <strong>hand</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+The current hand of the player.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#name-instance_method" title="#name (instance method)">- (&lt;String&gt;) <strong>name</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Name of player.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#split_bet-instance_method" title="#split_bet (instance method)">- (Integer) <strong>split_bet</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+The current bet on the split hand, if the player has split.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#split_hand-instance_method" title="#split_hand (instance method)">- (Array&lt;Card&gt;) <strong>split_hand</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+The current split hand of the player, if the player has split.
+</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#blackjack%3F-instance_method" title="#blackjack? (instance method)">- (Boolean) <strong>blackjack?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Checks if main hand has Blackjack.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#busted%3F-instance_method" title="#busted? (instance method)">- (Boolean) <strong>busted?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Tells if player has been busted on main hand.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#can_double%3F-instance_method" title="#can_double? (instance method)">- (Boolean) <strong>can_double?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Checks if player has sufficient balance to double the main bet.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#can_split%3F-instance_method" title="#can_split? (instance method)">- (Boolean) <strong>can_split?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Tells if player has sufficient balance to split.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#can_split_double%3F-instance_method" title="#can_split_double? (instance method)">- (Boolean) <strong>can_split_double?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Checks if player has sufficient balance to double the split bet.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clear_hand%21-instance_method" title="#clear_hand! (instance method)">- (nil) <strong>clear_hand!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+This function effectively resets the state of the object for the next game,
+without modifying the total available cash.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#deal-instance_method" title="#deal (instance method)">- (nil) <strong>deal</strong>(card) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Deals a card to the player for the main hand.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#double%21-instance_method" title="#double! (instance method)">- (nil) <strong>double!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Indicates to player that the current main bet has doubled.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#hand_value-instance_method" title="#hand_value (instance method)">- (Integer) <strong>hand_value</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the current value of the main hand.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Player) <strong>initialize</strong>(name, balance, bustlimit) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+The constructor.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#lose%21-instance_method" title="#lose! (instance method)">- (nil) <strong>lose!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Indicates to player that current main bet was lost.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#make_bet%3F-instance_method" title="#make_bet? (instance method)">- (Boolean) <strong>make_bet?</strong>(amount) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+This function makes a bet of the given amount with the <span class='object_link'><a href="Dealer.html" title="Dealer (class)">Dealer</a></span>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#push%21-instance_method" title="#push! (instance method)">- (nil) <strong>push!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Indicates to player that main game ended in a push.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#split%21-instance_method" title="#split! (instance method)">- (nil) <strong>split!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Split the current player&#8217;s hand if possible, into two playing hands.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#split%3F-instance_method" title="#split? (instance method)">- (Boolean) <strong>split?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Check if the player has split hands.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#split_blackjack%3F-instance_method" title="#split_blackjack? (instance method)">- (Boolean) <strong>split_blackjack?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Checks if player got Blackjack on split hand.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#split_busted%3F-instance_method" title="#split_busted? (instance method)">- (Boolean) <strong>split_busted?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Tells if player has been busted on split hand.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#split_deal-instance_method" title="#split_deal (instance method)">- (nil) <strong>split_deal</strong>(card) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Deals a card to the player for the split hand.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#split_double%21-instance_method" title="#split_double! (instance method)">- (nil) <strong>split_double!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Indicates to player that the current split bet has doubled.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#split_hand_value-instance_method" title="#split_hand_value (instance method)">- (Integer) <strong>split_hand_value</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the current value of the split hand.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#split_lose%21-instance_method" title="#split_lose! (instance method)">- (nil) <strong>split_lose!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Indicates to player that current split bet was lost.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#split_push%21-instance_method" title="#split_push! (instance method)">- (nil) <strong>split_push!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Indicates to player that split game ended in a push.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#split_stand%21-instance_method" title="#split_stand! (instance method)">- (nil) <strong>split_stand!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Indicates to player that it has decided to stand on the split bet.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#split_standing%3F-instance_method" title="#split_standing? (instance method)">- (Boolean) <strong>split_standing?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Tells if the player decided to stand with split hand.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#split_win%21-instance_method" title="#split_win! (instance method)">- (nil) <strong>split_win!</strong>(payoff) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Indicates to player that current split bet was won with payoff.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#stand%21-instance_method" title="#stand! (instance method)">- (nil) <strong>stand!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Indicates to player that it has decided to stand on the main bet.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#standing%3F-instance_method" title="#standing? (instance method)">- (Boolean) <strong>standing?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Tells if the player decided to stand with main hand.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#win%21-instance_method" title="#win! (instance method)">- (nil) <strong>win!</strong>(payoff) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Indicates to player that current main bet was won with payoff.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Player (class)">Player</a></span></tt>) <strong>initialize</strong>(name, balance, bustlimit) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The constructor
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Name of the player
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>balance</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The starting balance of the player
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>bustlimit</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The limit after which the player goes bust, typically 21
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 29</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='rubyid_name identifier id'>name</span><span class='comma token'>,</span><span class='rubyid_balance identifier id'>balance</span><span class='comma token'>,</span><span class='rubyid_bustlimit identifier id'>bustlimit</span><span class='rparen token'>)</span>
+  <span class='rubyid_@balance ivar id'>@balance</span> <span class='assign token'>=</span> <span class='rubyid_balance identifier id'>balance</span>
+  <span class='rubyid_@bet ivar id'>@bet</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+  <span class='rubyid_@split_bet ivar id'>@split_bet</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+  <span class='rubyid_@hand ivar id'>@hand</span> <span class='assign token'>=</span> <span class='rubyid_Array constant id'>Array</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span>
+  <span class='rubyid_@split_hand ivar id'>@split_hand</span> <span class='assign token'>=</span> <span class='rubyid_Array constant id'>Array</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span>
+  <span class='rubyid_@BustLimit ivar id'>@BustLimit</span> <span class='assign token'>=</span> <span class='rubyid_bustlimit identifier id'>bustlimit</span>
+  <span class='rubyid_@name ivar id'>@name</span> <span class='assign token'>=</span> <span class='rubyid_name identifier id'>name</span>
+  <span class='rubyid_@standing ivar id'>@standing</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span>
+  <span class='rubyid_@is_split ivar id'>@is_split</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span>
+  <span class='rubyid_@split_standing ivar id'>@split_standing</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="balance=-instance_method"></span>
+      <span id="balance-instance_method"></span>
+      <div class="method_details first">
+  <p class="signature first" id="balance-instance_method">
+  
+    - (<tt>Integer</tt>) <strong>balance</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The balance left with player, excluding the current bet
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The balance left with player, excluding the current bet
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+13
+14
+15</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 13</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_balance identifier id'>balance</span>
+  <span class='rubyid_@balance ivar id'>@balance</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="bet-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="bet-instance_method">
+  
+    - (<tt>Integer</tt>) <strong>bet</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The current bet
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The current bet
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 15</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_bet identifier id'>bet</span>
+  <span class='rubyid_@bet ivar id'>@bet</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="hand-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="hand-instance_method">
+  
+    - (<tt>Array&lt;<span class='object_link'><a href="Card.html" title="Card (class)">Card</a></span>&gt;</tt>) <strong>hand</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The current hand of the player
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Card.html" title="Card (class)">Card</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The current hand of the player
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+19
+20
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 19</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_hand identifier id'>hand</span>
+  <span class='rubyid_@hand ivar id'>@hand</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="name-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="name-instance_method">
+  
+    - (<tt>&lt;String&gt;</tt>) <strong>name</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Name of player
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>&lt;String&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Name of player
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+23
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 23</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_name identifier id'>name</span>
+  <span class='rubyid_@name ivar id'>@name</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="split_bet-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="split_bet-instance_method">
+  
+    - (<tt>Integer</tt>) <strong>split_bet</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The current bet on the split hand, if the player has split
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The current bet on the split hand, if the player has split
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+17
+18
+19</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 17</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_split_bet identifier id'>split_bet</span>
+  <span class='rubyid_@split_bet ivar id'>@split_bet</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="split_hand-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="split_hand-instance_method">
+  
+    - (<tt>Array&lt;<span class='object_link'><a href="Card.html" title="Card (class)">Card</a></span>&gt;</tt>) <strong>split_hand</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The current split hand of the player, if the player has split
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Card.html" title="Card (class)">Card</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The current split hand of the player, if the player has split
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 21</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_split_hand identifier id'>split_hand</span>
+  <span class='rubyid_@split_hand ivar id'>@split_hand</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="blackjack?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>blackjack?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Checks if main hand has Blackjack
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+true iff main hand has Blackjack
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+134
+135
+136</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 134</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_blackjack? fid id'>blackjack?</span>
+  <span class='rubyid_hand identifier id'>hand</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span> <span class='eq op'>==</span> <span class='integer val'>2</span> <span class='rubyid_and and kw'>and</span> <span class='rubyid_hand_value identifier id'>hand_value</span> <span class='eq op'>==</span> <span class='rubyid_BustLimit constant id'>BustLimit</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="busted?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>busted?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Tells if player has been busted on main hand
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+true iff player busted on main hand
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+86
+87
+88</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 86</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_busted? fid id'>busted?</span>
+  <span class='rubyid_hand_busted? fid id'>hand_busted?</span><span class='lparen token'>(</span><span class='rubyid_@hand ivar id'>@hand</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="can_double?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>can_double?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Checks if player has sufficient balance to double the main bet
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+true iff balance is greater than current main bet
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+122
+123
+124</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 122</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_can_double? fid id'>can_double?</span>
+  <span class='rubyid_@hand ivar id'>@hand</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span> <span class='eq op'>==</span> <span class='integer val'>2</span> <span class='rubyid_and and kw'>and</span> <span class='rubyid_@balance ivar id'>@balance</span> <span class='geq op'>&gt;=</span> <span class='rubyid_@bet ivar id'>@bet</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="can_split?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>can_split?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Tells if player has sufficient balance to split
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+true iff user has sufficient balance to split
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+69
+70
+71
+72
+73
+74
+75</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 69</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_can_split? fid id'>can_split?</span>
+  <span class='rubyid_if if kw'>if</span> <span class='lparen token'>(</span><span class='rubyid_hand identifier id'>hand</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span> <span class='eq op'>==</span> <span class='integer val'>2</span> <span class='rubyid_and and kw'>and</span> <span class='rubyid_hand identifier id'>hand</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_value identifier id'>value</span> <span class='eq op'>==</span> <span class='rubyid_hand identifier id'>hand</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_value identifier id'>value</span><span class='rparen token'>)</span>
+    <span class='rubyid_true true kw'>true</span>
+  <span class='rubyid_else else kw'>else</span>
+    <span class='rubyid_false false kw'>false</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="can_split_double?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>can_split_double?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Checks if player has sufficient balance to double the split bet
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+true iff balance is greater than current split bet
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+230
+231
+232</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 230</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_can_split_double? fid id'>can_split_double?</span>
+  <span class='rubyid_@split_hand ivar id'>@split_hand</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span> <span class='eq op'>==</span> <span class='integer val'>2</span> <span class='rubyid_and and kw'>and</span> <span class='rubyid_@balance ivar id'>@balance</span> <span class='geq op'>&gt;=</span> <span class='rubyid_@split_bet ivar id'>@split_bet</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="clear_hand!-instance_method">
+  
+    - (<tt>nil</tt>) <strong>clear_hand!</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+This function effectively resets the state of the object for the next game,
+without modifying the total available cash
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 151</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_clear_hand! fid id'>clear_hand!</span>
+  <span class='comment val'># restore balances and bet</span>
+  <span class='comment val'># values in case user forgets</span>
+  <span class='comment val'># to call win, lose, push etc.</span>
+  <span class='rubyid_@balance ivar id'>@balance</span> <span class='opasgn op'>+=</span> <span class='lparen token'>(</span><span class='rubyid_@bet ivar id'>@bet</span> <span class='plus op'>+</span> <span class='rubyid_@split_bet ivar id'>@split_bet</span><span class='rparen token'>)</span>
+  <span class='rubyid_@bet ivar id'>@bet</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+  <span class='rubyid_@split_bet ivar id'>@split_bet</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+
+  <span class='rubyid_@standing ivar id'>@standing</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span>
+  <span class='rubyid_@split_standing ivar id'>@split_standing</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span>
+  <span class='rubyid_@is_split ivar id'>@is_split</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span>
+  <span class='rubyid_@hand ivar id'>@hand</span> <span class='assign token'>=</span> <span class='rubyid_Array constant id'>Array</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span>
+  <span class='rubyid_@split_hand ivar id'>@split_hand</span> <span class='assign token'>=</span> <span class='rubyid_Array constant id'>Array</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="deal-instance_method">
+  
+    - (<tt>nil</tt>) <strong>deal</strong>(card) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Deals a card to the player for the main hand
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>card</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Card.html" title="Card (class)">Card</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The card dealt
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+80
+81
+82</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 80</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_deal identifier id'>deal</span><span class='lparen token'>(</span><span class='rubyid_card identifier id'>card</span><span class='rparen token'>)</span>
+  <span class='rubyid_@hand ivar id'>@hand</span><span class='dot token'>.</span><span class='rubyid_push identifier id'>push</span><span class='lparen token'>(</span><span class='rubyid_card identifier id'>card</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="double!-instance_method">
+  
+    - (<tt>nil</tt>) <strong>double!</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Indicates to player that the current main bet has doubled
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+113
+114
+115
+116
+117
+118</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 113</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_double! fid id'>double!</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_can_double? fid id'>can_double?</span>
+    <span class='rubyid_@balance ivar id'>@balance</span> <span class='opasgn op'>-=</span> <span class='rubyid_@bet ivar id'>@bet</span>
+    <span class='rubyid_@bet ivar id'>@bet</span> <span class='opasgn op'>*=</span> <span class='integer val'>2</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="hand_value-instance_method">
+  
+    - (<tt>Integer</tt>) <strong>hand_value</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the current value of the main hand. This ensures that Aces are
+assigned the appropriate value, depending on the total.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Value of the main hand
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+142
+143
+144</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 142</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_hand_value identifier id'>hand_value</span>
+  <span class='rubyid_evaluate_hand identifier id'>evaluate_hand</span><span class='lparen token'>(</span><span class='rubyid_@hand ivar id'>@hand</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="lose!-instance_method">
+  
+    - (<tt>nil</tt>) <strong>lose!</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Indicates to player that current main bet was lost
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 92</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_lose! fid id'>lose!</span>
+  <span class='rubyid_@bet ivar id'>@bet</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="make_bet?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>make_bet?</strong>(amount) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+This function makes a bet of the given amount with the <span class='object_link'><a href="Dealer.html" title="Dealer (class)">Dealer</a></span>. This
+returns true or false depending on whether the player has sufficient
+balance to make the bet
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>amount</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The bet amount
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+true iff total balance is no less than the bet
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 49</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_make_bet? fid id'>make_bet?</span><span class='lparen token'>(</span><span class='rubyid_amount identifier id'>amount</span><span class='rparen token'>)</span>
+  <span class='rubyid_standing identifier id'>standing</span> <span class='assign token'>=</span> <span class='rubyid_false false kw'>false</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_amount identifier id'>amount</span> <span class='leq op'>&lt;=</span> <span class='lparen token'>(</span><span class='rubyid_@balance ivar id'>@balance</span> <span class='plus op'>+</span> <span class='rubyid_@bet ivar id'>@bet</span><span class='rparen token'>)</span>
+    <span class='rubyid_@balance ivar id'>@balance</span> <span class='assign token'>=</span> <span class='rubyid_@balance ivar id'>@balance</span> <span class='plus op'>+</span> <span class='rubyid_@bet ivar id'>@bet</span> <span class='minus op'>-</span> <span class='rubyid_amount identifier id'>amount</span>
+    <span class='rubyid_@bet ivar id'>@bet</span> <span class='assign token'>=</span> <span class='rubyid_amount identifier id'>amount</span>
+    <span class='rubyid_true true kw'>true</span>
+  <span class='rubyid_else else kw'>else</span>
+    <span class='rubyid_false false kw'>false</span>
+  <span class='rubyid_end end kw'>end</span>
+
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="push!-instance_method">
+  
+    - (<tt>nil</tt>) <strong>push!</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Indicates to player that main game ended in a push
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+106
+107
+108
+109</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 106</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_push! fid id'>push!</span>
+  <span class='rubyid_@balance ivar id'>@balance</span> <span class='opasgn op'>+=</span> <span class='rubyid_@bet ivar id'>@bet</span>
+  <span class='rubyid_@bet ivar id'>@bet</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="split!-instance_method">
+  
+    - (<tt>nil</tt>) <strong>split!</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Split the current player&#8217;s hand if possible, into two playing hands
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+169
+170
+171
+172
+173
+174
+175
+176</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 169</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_split! fid id'>split!</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_can_split? fid id'>can_split?</span>
+    <span class='rubyid_@split_hand ivar id'>@split_hand</span><span class='dot token'>.</span><span class='rubyid_push identifier id'>push</span><span class='lparen token'>(</span><span class='rubyid_@hand ivar id'>@hand</span><span class='dot token'>.</span><span class='rubyid_pop identifier id'>pop</span><span class='rparen token'>)</span>
+    <span class='rubyid_@balance ivar id'>@balance</span> <span class='opasgn op'>-=</span> <span class='rubyid_@bet ivar id'>@bet</span>
+    <span class='rubyid_@split_bet ivar id'>@split_bet</span> <span class='assign token'>=</span> <span class='rubyid_@bet ivar id'>@bet</span>
+    <span class='rubyid_@is_split ivar id'>@is_split</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="split?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>split?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Check if the player has split hands
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+true iff player has split his hand
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+180
+181
+182</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 180</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_split? fid id'>split?</span>
+  <span class='rubyid_@is_split ivar id'>@is_split</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="split_blackjack?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>split_blackjack?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Checks if player got Blackjack on split hand
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+true iff split hand got Blackjack
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+186
+187
+188</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 186</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_split_blackjack? fid id'>split_blackjack?</span>
+  <span class='rubyid_@split_hand ivar id'>@split_hand</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span> <span class='eq op'>==</span> <span class='integer val'>2</span> <span class='rubyid_and and kw'>and</span> <span class='rubyid_split_hand_value identifier id'>split_hand_value</span> <span class='eq op'>==</span> <span class='rubyid_@BustLimit ivar id'>@BustLimit</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="split_busted?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>split_busted?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Tells if player has been busted on split hand
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+true iff player busted on split hand
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+249
+250
+251</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 249</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_split_busted? fid id'>split_busted?</span>
+  <span class='rubyid_hand_busted? fid id'>hand_busted?</span><span class='lparen token'>(</span><span class='rubyid_@split_hand ivar id'>@split_hand</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="split_deal-instance_method">
+  
+    - (<tt>nil</tt>) <strong>split_deal</strong>(card) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Deals a card to the player for the split hand
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>card</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Card.html" title="Card (class)">Card</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The card dealt
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+243
+244
+245</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 243</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_split_deal identifier id'>split_deal</span><span class='lparen token'>(</span><span class='rubyid_card identifier id'>card</span><span class='rparen token'>)</span>
+  <span class='rubyid_@split_hand ivar id'>@split_hand</span><span class='dot token'>.</span><span class='rubyid_push identifier id'>push</span><span class='lparen token'>(</span><span class='rubyid_card identifier id'>card</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="split_double!-instance_method">
+  
+    - (<tt>nil</tt>) <strong>split_double!</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Indicates to player that the current split bet has doubled
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+221
+222
+223
+224
+225
+226</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 221</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_split_double! fid id'>split_double!</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_can_split_double? fid id'>can_split_double?</span>
+    <span class='rubyid_@balance ivar id'>@balance</span> <span class='opasgn op'>-=</span> <span class='rubyid_@split_bet ivar id'>@split_bet</span>
+    <span class='rubyid_@split_bet ivar id'>@split_bet</span> <span class='opasgn op'>*=</span> <span class='integer val'>2</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="split_hand_value-instance_method">
+  
+    - (<tt>Integer</tt>) <strong>split_hand_value</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the current value of the split hand. This ensures that Aces are
+assigned the appropriate value, depending on the total.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Value of the split hand
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+194
+195
+196</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 194</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_split_hand_value identifier id'>split_hand_value</span>
+  <span class='rubyid_evaluate_hand identifier id'>evaluate_hand</span><span class='lparen token'>(</span><span class='rubyid_@split_hand ivar id'>@split_hand</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="split_lose!-instance_method">
+  
+    - (<tt>nil</tt>) <strong>split_lose!</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Indicates to player that current split bet was lost
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+208
+209
+210</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 208</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_split_lose! fid id'>split_lose!</span>
+  <span class='rubyid_@split_bet ivar id'>@split_bet</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="split_push!-instance_method">
+  
+    - (<tt>nil</tt>) <strong>split_push!</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Indicates to player that split game ended in a push
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+214
+215
+216
+217</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 214</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_split_push! fid id'>split_push!</span>
+  <span class='rubyid_@balance ivar id'>@balance</span> <span class='opasgn op'>+=</span> <span class='rubyid_@split_bet ivar id'>@split_bet</span>
+  <span class='rubyid_@split_bet ivar id'>@split_bet</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="split_stand!-instance_method">
+  
+    - (<tt>nil</tt>) <strong>split_stand!</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Indicates to player that it has decided to stand on the split bet
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+236
+237
+238</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 236</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_split_stand! fid id'>split_stand!</span>
+  <span class='rubyid_@split_standing ivar id'>@split_standing</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="split_standing?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>split_standing?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Tells if the player decided to stand with split hand
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+true iff player had decided to stand with split hand
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+255
+256
+257</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 255</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_split_standing? fid id'>split_standing?</span>
+  <span class='rubyid_@split_standing ivar id'>@split_standing</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="split_win!-instance_method">
+  
+    - (<tt>nil</tt>) <strong>split_win!</strong>(payoff) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Indicates to player that current split bet was won with payoff
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>payoff</span>
+      
+      
+        <span class='type'>(<tt>Double</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Payoff for current split bet
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+201
+202
+203
+204</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 201</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_split_win! fid id'>split_win!</span><span class='lparen token'>(</span><span class='rubyid_payoff identifier id'>payoff</span><span class='rparen token'>)</span>
+  <span class='rubyid_@balance ivar id'>@balance</span> <span class='opasgn op'>+=</span> <span class='rubyid_Integer constant id'>Integer</span><span class='lparen token'>(</span><span class='lparen token'>(</span><span class='float val'>1.0</span> <span class='plus op'>+</span> <span class='rubyid_payoff identifier id'>payoff</span><span class='rparen token'>)</span><span class='mult op'>*</span><span class='rubyid_@split_bet ivar id'>@split_bet</span><span class='rparen token'>)</span>
+  <span class='rubyid_@split_bet ivar id'>@split_bet</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="stand!-instance_method">
+  
+    - (<tt>nil</tt>) <strong>stand!</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Indicates to player that it has decided to stand on the main bet
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+128
+129
+130</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 128</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_stand! fid id'>stand!</span>
+  <span class='rubyid_@standing ivar id'>@standing</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="standing?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>standing?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Tells if the player decided to stand with main hand
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+true iff player had decided to stand with main hand
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+63
+64
+65</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 63</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_standing? fid id'>standing?</span>
+  <span class='rubyid_@standing ivar id'>@standing</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="win!-instance_method">
+  
+    - (<tt>nil</tt>) <strong>win!</strong>(payoff) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Indicates to player that current main bet was won with payoff
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>payoff</span>
+      
+      
+        <span class='type'>(<tt>Double</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Payoff for current main bet
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+99
+100
+101
+102</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'src/Player.rb', line 99</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_win! fid id'>win!</span><span class='lparen token'>(</span><span class='rubyid_payoff identifier id'>payoff</span><span class='rparen token'>)</span>
+  <span class='rubyid_@balance ivar id'>@balance</span> <span class='opasgn op'>+=</span> <span class='rubyid_Integer constant id'>Integer</span><span class='lparen token'>(</span><span class='lparen token'>(</span><span class='float val'>1.0</span> <span class='plus op'>+</span> <span class='rubyid_payoff identifier id'>payoff</span><span class='rparen token'>)</span><span class='mult op'>*</span><span class='rubyid_@bet ivar id'>@bet</span><span class='rparen token'>)</span>
+  <span class='rubyid_@bet ivar id'>@bet</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Thu Jul 11 22:06:30 2013 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.7.4 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>
