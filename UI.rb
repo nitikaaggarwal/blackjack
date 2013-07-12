@@ -87,8 +87,8 @@ class UI
 
 	end
 
-	def print_card(card)
-		puts "You were dealt: #{card.type}"
+	def print_card(card_type)
+		puts "You were dealt: #{card_type}"
 	end
 
 	def print_busted(name,value)
@@ -121,14 +121,14 @@ class UI
 	end
 
 	def print_blackjack
-		print "BLACKJACK! Your payoff increases to 3:2.\n\n"
+		print "BLACKJACK! Your payoff increases to 3:2 unless dealer gets one too.\n\n"
 	end
 
-	def print_limit(player)
-		print "Congratulations #{player.name}! You're unbeatable now!\n\n"
+	def print_limit(name)
+		print "Congratulations #{name}! You're unbeatable now!\n\n"
 	end
 
-	def print_dealerbust(name)
+	def print_dealer_bust(name)
 		print "THE DEALER GOT BUSTED! Let's check if #{name} owes you.\n\n"
 	end
 
@@ -157,6 +157,28 @@ class UI
 
 		print "\n\n\n"
 		new_game
+	end
+
+	def print_split(card_type, split_card_type)
+		puts "You decided to split."
+		puts "You were dealt #{card_type} for the first hand"
+		print "You were dealt #{split_card_type} for the second hand\n\n"
+	end
+
+	def print_first_split
+		print "**** Playing first split ****\n\n"
+	end
+
+	def print_second_split
+		print "**** Playing second split ****\n\n"
+	end
+
+	def print_dealer_blackjack
+		print "Your dealer got a BLACKJACK! You could be in trouble now!\n\n"
+	end
+
+	def print_dealer_turn(name)
+		print "It's your dealer, #{name}'s turn now!\n\n"
 	end
 
 end

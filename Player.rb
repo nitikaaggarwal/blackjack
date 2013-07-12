@@ -125,7 +125,7 @@ class Player
 
 	# check if the player has split hands
 	def split?
-		is_split
+		@is_split
 	end
 
 	# returns true iff split hand got blackjack
