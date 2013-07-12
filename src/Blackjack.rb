@@ -37,3 +37,6 @@ require 'Table'
 	while table.new_game?
 		table.play_game
 	end
+
+	# print exit message
+	ui.print_exit

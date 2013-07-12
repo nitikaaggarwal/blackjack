@@ -254,7 +254,7 @@ class UI
 		new_game = true
 
 		if (gets.chomp.eql? "n")
-			false
+			new_game = false
 		end
 
 		print "\n\n\n"
