@@ -120,7 +120,7 @@ class Player
 	# Checks if player has sufficient balance to double the main bet
 	# @return [Boolean] true iff balance is greater than current main bet
 	def can_double?
-		@hand.length == 2 && @balance >= @bet
+		@hand.length == 2 and @balance >= @bet
 	end
 
 	# Indicates to player that it has decided to stand on the main bet
@@ -228,7 +228,7 @@ class Player
 	# Checks if player has sufficient balance to double the split bet
 	# @return [Boolean] true iff balance is greater than current split bet
 	def can_split_double?
-		@split_hand.length == 2 && @balance >= @split_bet
+		@split_hand.length == 2 and @balance >= @split_bet
 	end
 
 	# Indicates to player that it has decided to stand on the split bet

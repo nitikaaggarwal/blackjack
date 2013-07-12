@@ -279,13 +279,14 @@ private
 
 		@ui.print_dealer_turn(@dealer.name)
 
-		# if everyone is busted, no need for dealer to play
-		all_busted = true
+		# if everyone is busted or has Blackjack, no need for dealer to play
+		not_play = true
 		@players.each { |player|
-			all_busted = false if (!player.busted? or (player.split? and !player.split_busted?))
+			not_play = false if (!player.busted? or (player.split? and !player.split_busted?))
+			not_play = false if (!player.blackjack? or (player.split? and !player.split_blackjack?))
 		}
 
-		while(!all_busted and !@dealer.busted? and !@dealer.softlimit?)
+		while(!not_play and !@dealer.busted? and !@dealer.softlimit?)
 			@dealer.deal(@deck.pick)
 		end
 
