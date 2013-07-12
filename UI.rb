@@ -20,8 +20,20 @@ class UI
 	# Prompts for the number of players in the game
 	# @return [Integer] Number of players on the table. Must be positive.
 	def prompt_num_players
-		puts "Please enter number of players:"
-		num_players = Integer(gets.chomp)
+		num_players = 0
+		begin
+			puts "Please enter number of players:"
+			inputstring = gets.chomp
+			raise ArgumentError unless Integer(inputstring) != nil
+			num_players = Integer(inputstring)
+			raise RangeError unless (num_players > 0)
+		rescue RangeError
+			puts "Must have at least one player"
+			retry
+		rescue ArgumentError
+			puts "Number of players must be a positive integer"
+			retry
+		end
 		puts ""
 		num_players
 	end
@@ -46,8 +58,20 @@ class UI
 	# for the entire game
 	# @return [Integer] Starting cash for each player. Must be positive.
 	def prompt_cash
-		puts "Please enter initial cash"
-		cash = Integer(gets.chomp)
+		cash = 0
+		begin
+			puts "Please enter initial cash"
+			inputstring = gets.chomp
+			raise ArgumentError unless Integer(inputstring) != nil
+			cash = Integer(inputstring)
+			raise RangeError unless (cash > 0)
+		rescue RangeError
+			puts "Starting cash must be positive"
+			retry
+		rescue ArgumentError
+			puts "Cash must be a positive integer"
+			retry
+		end
 		puts ""
 		cash
 	end
@@ -59,13 +83,13 @@ class UI
 	def prompt_bet(player_name, max_bet)
 		bet = 0
 		begin
-			puts "Enter an integral bet for " + player_name + " no more than $" + max_bet.to_s
+			puts "Enter a positive integral bet for " + player_name + " no more than $" + max_bet.to_s
 			inputstring = gets.chomp
-			raise ArgumentError unless bet.is_a? Integer
+			raise ArgumentError unless Integer(bet) != nil
 			bet = Integer(inputstring)
 			raise RangeError unless (bet <= max_bet and bet > 0)
 		rescue RangeError
-			puts "You can't bet more than you have!"
+			puts "Your bet must be positive and no more than total balance"
 			retry
 		rescue ArgumentError
 			puts "I know you're drunk but bets can only be integers."
