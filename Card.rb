@@ -1,12 +1,19 @@
+# @author Nitika Aggarwal
+#
+# This standalone class represents the
+# concept of a playing card in a deck
+# of cards
 class Card
 
-	# the card type, could be ace, king queen etc
+	# @return <Constant> The card type, could be ace, king queen etc
 	attr_reader :type
 
-	# value ranges from 1 to 11, depending on type
+	# @return [Integer] Value ranges from 1 to 11, depending on type
 	attr_reader :value
 
-	# constructor
+	# The constructor function
+	# @param type [constant] The type of card.
+	# 	Should be one of :ACE, :ONE, :TWO etc.
 	def initialize(type)
 		@type = type
 
@@ -43,7 +50,8 @@ class Card
 		end
 	end
 
-	# check if it's an ace
+	# Returns true iff it's an ace
+	# @return [Boolean] true or false
 	def ace?
 		@type == :ACE
 	end

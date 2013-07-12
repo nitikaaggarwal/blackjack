@@ -1,12 +1,22 @@
 #!/usr/bin/ruby
 
+# @author Nitika Aggarwal
+# This is the main program that should be
+# run to play the Blackjack game. This
+# requires the use of classes {UI} and {Table}
+
 require 'UI'
 require 'Table'
 
+	# @return [Integer] The limit beyond which a player or dealer goes bust
 	BustLimit = 21
+	# @return [Integer] The limit dealer must hit before it stops dealing to itself
 	SoftLimit = 17
+	# @return [Integer] The initial number of cards to be dealt to each player and dealer
 	InitCards = 2
+	# @return [String] Name of the dealer
 	DealerName = "Lord Voldemort"
+	# @return [String] Name of the loan shark
 	LoanSharkName = "Lucius Malfoy"
 
 	ui = UI.new

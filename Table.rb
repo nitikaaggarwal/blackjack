@@ -4,10 +4,25 @@ require 'MultiDeck'
 require 'Player'
 require 'Dealer'
 
+# @author Nitika Aggarwal
+#
+# This represents the table in a Blackjack
+# game. Contains the players, dealer and
+# deck of card. This takes care of the
+# gameplay.
 class Table
 
 public
 
+	# The constructor.
+	# @param bustlimit [Integer] The limit before player goes bust, typically 21
+	# @param softlimit [Integer] The soft limit which the dealer hand value must hit before stops dealing, typically 17
+	# @param initcards [Integer] The initial number of cards to be dealt to players and dealer, typically 2
+	# @param dealername [String] Name of the dealer
+	# @param loansharkname [String] Name of the loan shark
+	# @param cash [Integer] Starting cash with each player
+	# @param numplayers [Integer] Number of players on the table
+	# @param ui [UI] The pretty-print interface that it should use to print to console
 	def initialize(bustlimit,softlimit,initcards,dealername,loansharkname,cash,numplayers,ui)
 		# set variables
 		@BustLimit = bustlimit
@@ -23,6 +38,10 @@ public
 
 	end
 
+	# Plays one round of Blackjack with each player.
+	# The balance at the end of the round becomes
+	# the starting balance for the next round
+	# @return [nil]
 	def play_game
 
 		@new_game = true
@@ -47,6 +66,8 @@ public
 
 	end
 
+	# Indicates whether players want to play another round
+	# @return [Boolean] true iff players want to play another round
 	def new_game?
 		@new_game
 	end

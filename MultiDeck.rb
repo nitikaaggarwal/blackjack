@@ -1,19 +1,26 @@
 require 'Card'
 
+# @author Nitika Aggarwal
+#
+# This class is an infinitely replenishable
+# deck of cards that can contain multiple
+# packs of cards. It uses objects of type {Card}
 class MultiDeck
 
-	# constructor
-	def initialize(num_decks)
+	# The constructor
+	# @param num_packs [Integer] The number of packs of card in the full deck
+	def initialize(num_packs)
 
 		@deck = Array.new
-		@num_decks = num_decks
+		@num_packs = num_packs
 
 	end
 
-	# pick one card from the deck
-	# this repopulates the deck
+	# Picks one card from the deck.
+	# This repopulates the deck
 	# if it is empty, effectively
 	# giving us an infinite deck
+	# @return [Card] A card from the deck
 	def pick
 		if @deck.length == 0
 			populate
@@ -24,15 +31,15 @@ class MultiDeck
 	end
 
 
-	# repopulate the deck
 	private
+	# repopulate the deck
 	def populate
 
 		@deck = Array.new
 
-		# add num_decks x 4 x 13 deck
-		# or num_decks x 52 deck
-		@num_decks.times do
+		# add num_packs x 4 x 13 deck
+		# or num_packs x 52 deck
+		@num_packs.times do
 			4.times do
 				@deck.push(Card.new(:ACE))
 				@deck.push(Card.new(:TWO))
