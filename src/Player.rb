@@ -67,7 +67,7 @@ class Player
 	# Tells if player has sufficient balance to split
 	# @return [Boolean] true iff user has sufficient balance to split
 	def can_split?
-		if (!@is_split and @hand.length == 2 and @hand[0].value == @hand[1].value)
+		if (!@is_split and @hand.length == 2 and @hand[0].value == @hand[1].value and can_double?)
 			true
 		else
 			false
