@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>
-  Class: MultiDeck
+  Class: Balance
   
     &mdash; Documentation by YARD 0.8.6.2
   
@@ -31,10 +31,10 @@
     <div id="header">
       <div id="menu">
   
-    <a href="_index.html">Index (M)</a> &raquo;
+    <a href="_index.html">Index (B)</a> &raquo;
     
     
-    <span class="title">MultiDeck</span>
+    <span class="title">Balance</span>
   
 
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
@@ -63,7 +63,7 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><h1>Class: MultiDeck
+    <div id="content"><h1>Class: Balance
   
   
   
@@ -78,7 +78,7 @@
         <ul class="fullTree">
           <li>Object</li>
           
-            <li class="next">MultiDeck</li>
+            <li class="next">Balance</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
@@ -94,7 +94,7 @@
   
   
     <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">src/MultiDeck.rb</dd>
+    <dd class="r2 last">src/Balance.rb</dd>
   
 </dl>
 <div class="clear"></div>
@@ -102,8 +102,8 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     <p>
-This class is an infinitely replenishable deck of cards that can contain
-multiple packs of cards. It uses objects of type <span class='object_link'><a href="Card.html" title="Card (class)">Card</a></span>
+It is a container class that stores an Integer value which allows different
+<span class='object_link'><a href="Player.html" title="Player (class)">Player</a></span> objects to share balance for split bets.
 </p>
 
 
@@ -133,6 +133,39 @@ Nitika Aggarwal
 
 
 
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#balance-instance_method" title="#balance (instance method)">- (Integer) <strong>balance</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+The balance.
+</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
 
 
 
@@ -147,7 +180,7 @@ Nitika Aggarwal
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (MultiDeck) <strong>initialize</strong>(num_packs) </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (nil) <strong>initialize</strong>(balance = 0) </a>
     
 
     
@@ -171,31 +204,6 @@ The constructor.
 </li>
 
       
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#pick-instance_method" title="#pick (instance method)">- (Card) <strong>pick</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>
-Picks one card from the deck.
-</p>
-</div></span>
-  
-</li>
-
-      
     </ul>
   
 
@@ -205,7 +213,7 @@ Picks one card from the deck.
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="MultiDeck (class)">MultiDeck</a></span></tt>) <strong>initialize</strong>(num_packs) 
+    - (<tt>nil</tt>) <strong>initialize</strong>(balance = 0) 
   
 
   
@@ -226,16 +234,18 @@ The constructor
   
     <li>
       
-        <span class='name'>num_packs</span>
+        <span class='name'>balance</span>
       
       
         <span class='type'>(<tt>Integer</tt>)</span>
       
       
+        <em class="default">(defaults to: <tt>0</tt>)</em>
+      
       
         &mdash;
         <div class='inline'><p>
-The number of packs of card in the full deck
+Initial value for the balance variable.
 </p>
 </div>
       
@@ -250,21 +260,15 @@ The number of packs of card in the full deck
       <pre class="lines">
 
 
-12
-13
 14
 15
-16
-17</pre>
+16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/MultiDeck.rb', line 12</span>
+      <pre class="code"><span class="info file"># File 'src/Balance.rb', line 14</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='rubyid_num_packs identifier id'>num_packs</span><span class='rparen token'>)</span>
-
-  <span class='rubyid_@deck ivar id'>@deck</span> <span class='assign token'>=</span> <span class='rubyid_Array constant id'>Array</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span>
-  <span class='rubyid_@num_packs ivar id'>@num_packs</span> <span class='assign token'>=</span> <span class='rubyid_num_packs identifier id'>num_packs</span>
-
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_initialize identifier id'>initialize</span> <span class='lparen token'>(</span><span class='rubyid_balance identifier id'>balance</span><span class='assign token'>=</span><span class='integer val'>0</span><span class='rparen token'>)</span>
+  <span class='rubyid_@balance ivar id'>@balance</span> <span class='assign token'>=</span> <span class='rubyid_balance identifier id'>balance</span>
 <span class='rubyid_end end kw'>end</span>
 </pre>
     </td>
@@ -274,15 +278,15 @@ The number of packs of card in the full deck
   
 </div>
 
-
-  <div id="instance_method_details" class="method_details_list">
-    <h2>Instance Method Details</h2>
-
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
     
+      
+      <span id="balance=-instance_method"></span>
       <div class="method_details first">
-  <h3 class="signature first" id="pick-instance_method">
+  <h3 class="signature first" id="balance-instance_method">
   
-    - (<tt><span class='object_link'><a href="Card.html" title="Card (class)">Card</a></span></tt>) <strong>pick</strong> 
+    - (<tt>Integer</tt>) <strong>balance</strong> 
   
 
   
@@ -291,8 +295,7 @@ The number of packs of card in the full deck
 </h3><div class="docstring">
   <div class="discussion">
     <p>
-Picks one card from the deck. This repopulates the deck if it is empty,
-effectively giving us an infinite deck
+The balance
 </p>
 
 
@@ -306,13 +309,13 @@ effectively giving us an infinite deck
     <li>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Card.html" title="Card (class)">Card</a></span></tt>)</span>
+        <span class='type'>(<tt>Integer</tt>)</span>
       
       
       
         &mdash;
         <div class='inline'><p>
-A card from the deck
+The balance
 </p>
 </div>
       
@@ -326,25 +329,15 @@ A card from the deck
       <pre class="lines">
 
 
-24
-25
-26
-27
-28
-29
-30
-31</pre>
+9
+10
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/MultiDeck.rb', line 24</span>
+      <pre class="code"><span class="info file"># File 'src/Balance.rb', line 9</span>
 
-<span class='rubyid_def def kw'>def</span> <span class='rubyid_pick identifier id'>pick</span>
-  <span class='rubyid_if if kw'>if</span> <span class='rubyid_@deck ivar id'>@deck</span><span class='dot token'>.</span><span class='rubyid_length identifier id'>length</span> <span class='eq op'>==</span> <span class='integer val'>0</span>
-    <span class='rubyid_populate identifier id'>populate</span>
-    <span class='rubyid_@deck ivar id'>@deck</span><span class='dot token'>.</span><span class='rubyid_shuffle! fid id'>shuffle!</span>
-  <span class='rubyid_end end kw'>end</span>
-
-  <span class='rubyid_@deck ivar id'>@deck</span><span class='dot token'>.</span><span class='rubyid_shift identifier id'>shift</span>
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_balance identifier id'>balance</span>
+  <span class='rubyid_@balance ivar id'>@balance</span>
 <span class='rubyid_end end kw'>end</span>
 </pre>
     </td>
@@ -353,6 +346,7 @@ A card from the deck
 </div>
     
   </div>
+
 
 </div>
 

@@ -41,7 +41,7 @@ public
 	# Plays one round of Blackjack with each player.
 	# The balance at the end of the round becomes
 	# the starting balance for the next round
-	# @return [nil]
+	# @return [void]
 	def play_game
 
 		@new_game = true
@@ -53,13 +53,21 @@ public
 		deal_dealer_cards
 
 		# for each user play
-		@players.each{ |player| play_with_player(player) }
+		@players.each_index{ |i|
+			split_player = play_with_player(@players[i])
+			@players.insert(i+1,split_player) if split_player != nil
+		}
 
 		# play with dealer
 		play_with_dealer
 
 		# for each player, compute winnings
-		@players.each{ |player| compute_winnings(player) }
+		@players.each_index{ |i|
+			# if first hand of a split, then remove next player from
+			# array and assign as the split player
+			split_player = (@players[i].split? and @players[i].first_hand?) ? @players.delete_at(i+1) : nil
+			compute_winnings(@players[i], split_player)
+		}
 
 		# prompt for new game
 		@new_game = @ui.prompt_new_game?
@@ -100,111 +108,79 @@ private
 
 		# check if player has enough balance
 		# if not, lend some moolah
-		if (player.balance == 0)
-			player.balance = @Cash
+		if (player.get_balance == 0)
+			player.set_balance!(@Cash)
 			@ui.print_nobalance(player.name, @LoanSharkName, @Cash)
 		end
 
 		# prompt and make bet
-		init_player(player,@ui.prompt_bet(player.name,player.balance))
+		init_player(player,@ui.prompt_bet(player.name,player.get_balance))
 
 	end
 
 	# This function contains most of the complex logic for playing Blackjack
 	def play_with_player(player)
 
-		# enter loop if one of the following conditions is met:
-		# 1. player is playing first hand
-		# 2. player has split and is playing the second hand
-		while((!player.busted? and !player.standing?) or (player.split? and !player.split_busted? and !player.split_standing?))
+		# in case of a split, this will hold a split copy
+		# of the player
+		split_player = nil
 
-			playing_first_hand = (!player.busted? and !player.standing?)
-			playing_second_hand = (!playing_first_hand and player.split? and !player.split_busted? and !player.split_standing?)
+		# if we're playing the second copy of a split
+		@ui.print_second_split if !player.first_hand?
 
-			# if user has split, inform which hand currently betting on
-			if (playing_first_hand and player.split? and player.hand.length == @InitCards)
-				@ui.print_first_split
-			elsif (playing_second_hand and player.split_hand.length == @InitCards)
-				@ui.print_second_split
+		# play until user goes bust
+		while(player.hand_value < @BustLimit)
+
+			# print current hand information
+			@ui.print_hand(player.name, player.hand, player.hand_value)
+
+			# prompt for options based on current state
+			case (@ui.prompt_options(player.can_double?, player.can_split?))
+
+				# hit
+				when 'h'
+					card = @deck.pick
+					player.deal(card)
+
+					@ui.print_card(card.type)
+				# stand
+				when 's'
+					@ui.print_stand(player.name, player.hand_value)
+					break
+				# double
+				when 'd'
+					player.double!
+					card = @deck.pick
+					player.deal(card)
+
+					@ui.print_card(card.type)
+					@ui.print_hand(player.name, player.hand, player.hand_value) # FIXME: not happy with this call
+					break
+				# split
+				when 't'
+					split_player = player.split!
+					card1 = @deck.pick
+					card2 = @deck.pick
+					player.deal(card1)
+					split_player.deal(card2)
+
+					@ui.print_split(card1.type,card2.type)
+					# print that first hand will be played
+					@ui.print_first_split
 			end
 
-			# print player hand information
-			if playing_first_hand
-				@ui.print_hand(player.name, player.hand, player.hand_value)
-			else
-				@ui.print_hand(player.name, player.split_hand, player.split_hand_value)
-			end
+		end
 
-			# check for blackjack or full hand
-			# if you're playing the first hand
-			skip = false
-			if (playing_first_hand and (@dealer.blackjack? or player.blackjack? or player.hand_value == @BustLimit))
-				skip = true
-				player.stand!
-			# if you're playing the second hand
-			elsif (playing_second_hand and (@dealer.blackjack? or player.split_blackjack? or player.split_hand_value == @BustLimit))
-				skip = true
-				player.split_stand!
-			end
+		player.stand!
 
-			# prompt for option and process
-			just_split = false
-			card = nil
-			split_card = nil
-			if !skip
-				case (@ui.prompt_options(((playing_first_hand and player.can_double?) or (playing_second_hand and player.can_split_double?)),player.can_split?))
-					when "h"
-						card = @deck.pick
-						playing_first_hand ? player.deal(card) : player.split_deal(card)
-						if (playing_first_hand and (player.hand_value == @BustLimit))
-							player.stand!
-						elsif (playing_second_hand and (player.split_hand_value == @BustLimit))
-							player.split_stand!
-						end
-					when "s"
-						playing_first_hand ? player.stand! : player.split_stand!
-					when "d"
-						playing_first_hand ? player.double! : player.split_double!
-						card = @deck.pick
-						playing_first_hand ? player.deal(card) : player.split_deal(card)
-						playing_first_hand ? player.stand! : player.split_stand!
-					when "t"
-						player.split!
-						card = @deck.pick
-						split_card = @deck.pick
-						player.deal(card)
-						player.split_deal(split_card)
-						just_split = true
-				end # end case
-			end
+		# check for blackjack
+		@ui.print_blackjack if player.blackjack?
+		# check for full hand sans blackjack
+		@ui.print_limit(player.name) if (!player.blackjack? and player.hand_value == @BustLimit)
+		# check if busted
+		@ui.print_busted(player.name, player.hand_value) if player.busted?
 
-			# inform UI
-
-			# print current card unless we have elected to stand or
-			# have just decided to split
-			@ui.print_card(card.type) if !card.nil? and !just_split
-
-			# special case of stand
-			if ((playing_first_hand and player.standing?) or (playing_second_hand and player.split_standing?))
-				playing_first_hand ? @ui.print_stand(player.name, player.hand_value) : @ui.print_stand(player.name, player.split_hand_value)
-			end
-
-			# check if user just split
-			if just_split
-				@ui.print_split(card.type,split_card.type)
-			# check for blackjack
-			elsif ((playing_first_hand and player.blackjack?) or (playing_second_hand and player.split_blackjack?))
-				@ui.print_blackjack
-			# check if user just hit the BustLimit
-			elsif ((playing_first_hand and player.hand_value == @BustLimit) or (playing_second_hand and player.split_hand_value == @BustLimit))
-				@ui.print_limit(player.name)
-			elsif ((playing_first_hand and player.busted?) or (playing_second_hand and player.split_busted?))
-				@ui.print_busted(player.name, player.hand_value)
-			elsif ((playing_first_hand and player.standing? and !player.split?) or (playing_second_hand and player.split_standing?))
-				break
-			end
-
-		end # end while
+		return split_player
 
 	end
 
@@ -228,55 +204,9 @@ private
 	# A positive sign indicates a win for the player
 	# Negative sign means a loss and 0 winnings
 	# indicate a push
-	def compute_winnings(player)
+	def compute_winnings(player,split_player=nil)
 
-		winnings = 0
-
-		# player busted before dealer or player's hand's value
-		# less than dealer's but dealer not busted
-		# dealer win
-		if (player.busted? or (!@dealer.busted? and player.hand_value < @dealer.hand_value))
-			winnings -= player.bet
-			player.lose!
-		# push
-		elsif ((player.blackjack? and @dealer.blackjack?) or (!player.blackjack? and player.hand_value == @dealer.hand_value))
-			player.push!
-		# player wins
-		else
-			payoff = 1.0
-			# insurance
-			if (@dealer.upcard_ace?)
-				payoff = 2.0
-			# blackjack
-			elsif (player.blackjack?)
-				payoff = 1.5
-			end
-			winnings += Integer(player.bet*payoff)
-			player.win!(payoff)
-		end
-
-		if (player.split?)
-			# dealer win
-			if (player.split_busted? or (!@dealer.busted? and player.split_hand_value < @dealer.hand_value))
-				winnings -= player.split_bet
-				player.split_lose!
-			# player's hand equals dealer's hand
-			elsif ((player.split_blackjack? and @dealer.blackjack?) or (!player.split_blackjack? and player.split_hand_value == @dealer.hand_value))
-				player.split_push!
-			# player wins
-			else
-				payoff = 1.0
-				# insurance
-				if (@dealer.upcard_ace?)
-					payoff = 2.0
-				# blackjack
-				elsif (player.split_blackjack?)
-					payoff = 1.5
-				end
-				winnings += Integer(player.split_bet*payoff)
-				player.split_win!(payoff)
-			end
-		end
+		winnings = compute_single_winnings(player) + compute_single_winnings(split_player)
 
 		# convey to UI
 		ui_player_results(player,winnings)
@@ -290,10 +220,7 @@ private
 
 		# if everyone is busted or has Blackjack, no need for dealer to play
 		not_play = true
-		@players.each { |player|
-			not_play = false if (!player.busted? or (player.split? and !player.split_busted?))
-			not_play = false if (!player.blackjack? or (player.split? and !player.split_blackjack?))
-		}
+		@players.each { |player| not_play = false if (!player.busted? and !player.blackjack?) }
 
 		while(!not_play and !@dealer.busted? and !@dealer.softlimit?)
 			@dealer.deal(@deck.pick)
@@ -327,7 +254,43 @@ private
 			@ui.print_win(player.name, winnings)
 		end
 
-		@ui.print_balance(player.balance)
+		@ui.print_balance(player.get_balance)
+	end
+
+	# compute winnings of one player
+	def compute_single_winnings (player)
+
+		winnings = 0
+
+		if (player.nil?)
+			return winnings
+		end
+
+		# player busted before dealer or player's hand's value
+		# less than dealer's but dealer not busted
+		# dealer win
+		if (player.busted? or (!@dealer.busted? and player.hand_value < @dealer.hand_value) or (!player.blackjack? and dealer.blackjack?))
+			winnings -= player.bet
+			player.lose!
+		# push
+		elsif ((player.blackjack? and @dealer.blackjack?) or (!player.blackjack? and player.hand_value == @dealer.hand_value))
+			player.push!
+		# player wins
+		else
+			payoff = 1.0
+			# insurance
+			if (@dealer.upcard_ace?)
+				payoff = 2.0
+			# blackjack
+			elsif (player.blackjack?)
+				payoff = 1.5
+			end
+			winnings += Integer(player.bet*payoff)
+			player.win!(payoff)
+		end
+
+		return winnings
+
 	end
 
 end

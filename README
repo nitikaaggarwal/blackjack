@@ -35,13 +35,15 @@ on the command prompt should do the trick
 
 WARNING
 
+N = 4
+
 1. Has some subtle Harry Potter references that may not go down well
 with every user.
 2. This is my best work, given:
-   * I took 3 days to complete this code
+   * I took N days to complete this code
    * I had no idea of how Blackjack is played
      and had to additionally learn the rules of
-     the game within the 3 day period
+     the game within the N day period
    * I was familiar with Ruby but was yet to
      write a serious program until this one
 

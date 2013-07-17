@@ -1,4 +1,5 @@
 require 'Card'
+require 'Balance'
 
 # @author Nitika Aggarwal
 #
@@ -9,34 +10,26 @@ require 'Card'
 # player decides to split.
 class Player
 	
-	# @return [Integer] The balance left with player, excluding the current bet
-	attr_accessor :balance
 	# @return [Integer] The current bet
 	attr_reader :bet
-	# @return [Integer] The current bet on the split hand, if the player has split
-	attr_reader :split_bet
 	# @return [Array<Card>] The current hand of the player
 	attr_reader :hand
-	# @return [Array<Card>] The current split hand of the player, if the player has split
-	attr_reader :split_hand
 	# @return [<String>] Name of player
 	attr_reader :name
-
+	
 	# The constructor
 	# @param name [String] Name of the player
 	# @param balance [Integer] The starting balance of the player
 	# @param bustlimit [Integer] The limit after which the player goes bust, typically 21
 	def initialize(name,balance,bustlimit)
-		@balance = balance
 		@bet = 0
-		@split_bet = 0
 		@hand = Array.new
-		@split_hand = Array.new
 		@BustLimit = bustlimit
 		@name = name
 		@standing = false
 		@is_split = false
-		@split_standing = false
+		@balance = Balance.new(balance)
+		@first_hand = true
 	end
 
 	# This function makes a bet of the given
@@ -48,12 +41,12 @@ class Player
 	# @return [Boolean] true iff total balance is no less than the bet
 	def make_bet?(amount)
 		standing = false
-		if amount <= (@balance + @bet)
-			@balance = @balance + @bet - amount
+		if amount <= (@balance.balance + @bet)
+			@balance.balance = @balance.balance + @bet - amount
 			@bet = amount
-			true
+			return true
 		else
-			false
+			return false
 		end
 
 	end
@@ -61,22 +54,22 @@ class Player
 	# Tells if the player decided to stand with main hand
 	# @return [Boolean] true iff player had decided to stand with main hand
 	def standing?
-		@standing
+		return @standing
 	end
 
 	# Tells if player has sufficient balance to split
 	# @return [Boolean] true iff user has sufficient balance to split
 	def can_split?
 		if (!@is_split and @hand.length == 2 and @hand[0].value == @hand[1].value and can_double?)
-			true
+			return true
 		else
-			false
+			return false
 		end
 	end
 
 	# Deals a card to the player for the main hand
 	# @param card [Card] The card dealt
-	# @return [nil]
+	# @return [void]
 	def deal(card)
 		@hand.push(card)
 	end
@@ -84,35 +77,35 @@ class Player
 	# Tells if player has been busted on main hand
 	# @return [Boolean] true iff player busted on main hand
 	def busted?
-		hand_busted?(@hand)
+		return hand_busted?(@hand)
 	end
 
 	# Indicates to player that current main bet was lost
-	# @return [nil]
+	# @return [void]
 	def lose!
 		@bet = 0
 	end
 
 	# Indicates to player that current main bet was won with payoff
 	# @param payoff [Double] Payoff for current main bet
-	# @return [nil]
+	# @return [void]
 	def win!(payoff)
-		@balance += Integer((1.0 + payoff)*@bet)
+		@balance.balance += Integer((1.0 + payoff)*@bet)
 		@bet = 0
 	end
 
 	# Indicates to player that main game ended in a push
-	# @return [nil]
+	# @return [void]
 	def push!
-		@balance += @bet
+		@balance.balance += @bet
 		@bet = 0
 	end
 
 	# Indicates to player that the current main bet has doubled
-	# @return [nil]
+	# @return [void]
 	def double!
 		if can_double?
-			@balance -= @bet
+			@balance.balance -= @bet
 			@bet *= 2
 		end
 	end
@@ -120,11 +113,11 @@ class Player
 	# Checks if player has sufficient balance to double the main bet
 	# @return [Boolean] true iff balance is greater than current main bet
 	def can_double?
-		@hand.length == 2 and @balance >= @bet
+		return (@hand.length == 2 and @balance.balance >= @bet)
 	end
 
 	# Indicates to player that it has decided to stand on the main bet
-	# @return [nil]
+	# @return [void]
 	def stand!
 		@standing = true
 	end
@@ -132,7 +125,7 @@ class Player
 	# Checks if main hand has Blackjack
 	# @return [Boolean] true iff main hand has Blackjack
 	def blackjack?
-		hand.length == 2 and hand_value == BustLimit
+		return (hand.length == 2 and hand_value == BustLimit)
 	end
 
 	# Returns the current value of the main hand.
@@ -140,122 +133,74 @@ class Player
 	# appropriate value, depending on the total.
 	# @return [Integer] Value of the main hand
 	def hand_value
-		evaluate_hand(@hand)
+		return evaluate_hand(@hand)
 	end
 
 	# This function effectively
 	# resets the state of the object
 	# for the next game, without
 	# modifying the total available cash
-	# @return [nil]
+	# @return [void]
 	def clear_hand!
 		# restore balances and bet
 		# values in case user forgets
 		# to call win, lose, push etc.
-		@balance += (@bet + @split_bet)
+		@balance.balance += @bet
 		@bet = 0
-		@split_bet = 0
 
 		@standing = false
-		@split_standing = false
 		@is_split = false
 		@hand = Array.new
-		@split_hand = Array.new
 	end
 
 	# Split the current player's hand
-	# if possible, into two playing hands
-	# @return [nil]
+	# if possible, into two playing hands.
+	# The split player it returns has the 
+	# same bet and shares it's balance with
+	# self
+	# @return [Player,nil] The player with the split hand
 	def split!
+		p = nil
 		if can_split?
-			@split_hand.push(@hand.pop)
-			@balance -= @bet
-			@split_bet = @bet
+			p = Player.new(@name,@balance.balance,@BustLimit)
+			p.instance_variable_set(:@first_hand,false)
 			@is_split = true
+			p.instance_variable_set(:@is_split,true)
+			p.instance_variable_set(:@balance,@balance)
+			p.make_bet?(@bet)
+			p.deal(hand.pop)
 		end
+		return p
+	end
+
+	# This is used to check if the player
+	# is the first hand in a split
+	# @return [Boolean] true iff self is not split or first hand in a split
+	def first_hand?
+		return @first_hand
 	end
 
 	# Check if the player has split hands
 	# @return [Boolean] true iff player has split his hand
 	def split?
-		@is_split
+		return @is_split
+	end
+	
+	# Returns the current balance with the player
+	# excluding the bet amount
+	# @return [Integer] Balance
+	def get_balance
+		return @balance.balance
 	end
 
-	# Checks if player got Blackjack on split hand
-	# @return [Boolean] true iff split hand got Blackjack
-	def split_blackjack?
-		@split_hand.length == 2 and split_hand_value == @BustLimit
+	# Set the balance for the player
+	# and resets the bet
+	# @return [void]
+	def set_balance!(value)
+		@balance.balance = value
+		@bet = 0 
 	end
-
-	# Returns the current value of the split hand.
-	# This ensures that Aces are assigned the
-	# appropriate value, depending on the total.
-	# @return [Integer] Value of the split hand
-	def split_hand_value
-		evaluate_hand(@split_hand)
-	end
-
-	# Indicates to player that current split bet was won with payoff
-	# @param payoff [Double] Payoff for current split bet
-	# @return [nil]
-	def split_win!(payoff)
-		@balance += Integer((1.0 + payoff)*@split_bet)
-		@split_bet = 0
-	end
-
-	# Indicates to player that current split bet was lost
-	# @return [nil]
-	def split_lose!
-		@split_bet = 0
-	end
-
-	# Indicates to player that split game ended in a push
-	# @return [nil]
-	def split_push!
-		@balance += @split_bet
-		@split_bet = 0
-	end
-
-	# Indicates to player that the current split bet has doubled
-	# @return [nil]
-	def split_double!
-		if can_split_double?
-			@balance -= @split_bet
-			@split_bet *= 2
-		end
-	end
-
-	# Checks if player has sufficient balance to double the split bet
-	# @return [Boolean] true iff balance is greater than current split bet
-	def can_split_double?
-		@split_hand.length == 2 and @balance >= @split_bet
-	end
-
-	# Indicates to player that it has decided to stand on the split bet
-	# @return [nil]
-	def split_stand!
-		@split_standing = true
-	end
-
-	# Deals a card to the player for the split hand
-	# @param card [Card] The card dealt
-	# @return [nil]
-	def split_deal(card)
-		@split_hand.push(card)
-	end
-
-	# Tells if player has been busted on split hand
-	# @return [Boolean] true iff player busted on split hand
-	def split_busted?
-		hand_busted?(@split_hand)
-	end
-
-	# Tells if the player decided to stand with split hand
-	# @return [Boolean] true iff player had decided to stand with split hand
-	def split_standing?
-		@split_standing
-	end
-
+	
 private
 
 	def hand_busted?(hand)

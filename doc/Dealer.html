@@ -6,18 +6,20 @@
 <title>
   Class: Dealer
   
-    &mdash; Documentation by YARD 0.7.4
+    &mdash; Documentation by YARD 0.8.6.2
   
 </title>
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
   relpath = '';
-  if (relpath != '') relpath += '/';
+  framesUrl = "frames.html#!" + escape(window.location.href);
 </script>
+
 
   <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
 
@@ -26,36 +28,41 @@
 
   </head>
   <body>
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
-    
     <div id="header">
       <div id="menu">
   
-    <a href="_index.html">Index (D)</a> &raquo; 
+    <a href="_index.html">Index (D)</a> &raquo;
     
     
     <span class="title">Dealer</span>
   
-  
+
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a id="class_list_link" href="#">Class List</a>
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
   
-    <a id="method_list_link" href="#">Method List</a>
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
   
-    <a id="file_list_link" href="#">File List</a>
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
   
 </div>
       <div class="clear"></div>
     </div>
-    
+
     <iframe id="search_frame"></iframe>
-    
+
     <div id="content"><h1>Class: Dealer
   
   
@@ -108,7 +115,7 @@ class.
 </div>
 <div class="tags">
   
-<h3>Author:</h3>
+<p class="tag_title">Author:</p>
 <ul class="author">
   
     <li>
@@ -128,10 +135,8 @@ Nitika Aggarwal
 
 </div>
 
-  
-  
-  
-  
+
+
   <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
   <ul class="summary">
     
@@ -145,7 +150,10 @@ Nitika Aggarwal
   </span>
   
   
-    <span class="note title readonly">readonly</span>
+  
+    
+      <span class="note title readonly">readonly</span>
+    
     
   
   
@@ -168,11 +176,8 @@ The soft dealer limit, typically 17.
 
   
   
-  
-  
-  
   <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="Player.html" title="Player (class)">Player</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Player.html#balance-instance_method" title="Player#balance (method)">balance</a></span>, <span class='object_link'><a href="Player.html#bet-instance_method" title="Player#bet (method)">bet</a></span>, <span class='object_link'><a href="Player.html#hand-instance_method" title="Player#hand (method)">hand</a></span>, <span class='object_link'><a href="Player.html#name-instance_method" title="Player#name (method)">name</a></span>, <span class='object_link'><a href="Player.html#split_bet-instance_method" title="Player#split_bet (method)">split_bet</a></span>, <span class='object_link'><a href="Player.html#split_hand-instance_method" title="Player#split_hand (method)">split_hand</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Player.html#bet-instance_method" title="Player#bet (method)">#bet</a></span>, <span class='object_link'><a href="Player.html#hand-instance_method" title="Player#hand (method)">#hand</a></span>, <span class='object_link'><a href="Player.html#name-instance_method" title="Player#name (method)">#name</a></span></p>
 
 
   
@@ -191,6 +196,7 @@ The soft dealer limit, typically 17.
 
     
   </span>
+  
   
     <span class="note title constructor">constructor</span>
   
@@ -223,6 +229,7 @@ The constructor.
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'><p>
@@ -241,6 +248,7 @@ Check if reached softlimit.
 
     
   </span>
+  
   
   
   
@@ -271,6 +279,7 @@ Returns the dealer upcard unless hand is empty (should not happen).
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'><p>
@@ -292,19 +301,22 @@ Check if upcard is ACE to help detect insurance 3:2 payout.
   
   
   
+  
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Player.html" title="Player (class)">Player</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Player.html#blackjack%3F-instance_method" title="Player#blackjack? (method)">#blackjack?</a></span>, <span class='object_link'><a href="Player.html#busted%3F-instance_method" title="Player#busted? (method)">#busted?</a></span>, <span class='object_link'><a href="Player.html#can_double%3F-instance_method" title="Player#can_double? (method)">#can_double?</a></span>, <span class='object_link'><a href="Player.html#can_split%3F-instance_method" title="Player#can_split? (method)">#can_split?</a></span>, <span class='object_link'><a href="Player.html#can_split_double%3F-instance_method" title="Player#can_split_double? (method)">#can_split_double?</a></span>, <span class='object_link'><a href="Player.html#clear_hand%21-instance_method" title="Player#clear_hand! (method)">#clear_hand!</a></span>, <span class='object_link'><a href="Player.html#deal-instance_method" title="Player#deal (method)">#deal</a></span>, <span class='object_link'><a href="Player.html#hand_value-instance_method" title="Player#hand_value (method)">#hand_value</a></span>, <span class='object_link'><a href="Player.html#split%21-instance_method" title="Player#split! (method)">#split!</a></span>, <span class='object_link'><a href="Player.html#split%3F-instance_method" title="Player#split? (method)">#split?</a></span>, <span class='object_link'><a href="Player.html#split_blackjack%3F-instance_method" title="Player#split_blackjack? (method)">#split_blackjack?</a></span>, <span class='object_link'><a href="Player.html#split_busted%3F-instance_method" title="Player#split_busted? (method)">#split_busted?</a></span>, <span class='object_link'><a href="Player.html#split_deal-instance_method" title="Player#split_deal (method)">#split_deal</a></span>, <span class='object_link'><a href="Player.html#split_double%21-instance_method" title="Player#split_double! (method)">#split_double!</a></span>, <span class='object_link'><a href="Player.html#split_hand_value-instance_method" title="Player#split_hand_value (method)">#split_hand_value</a></span>, <span class='object_link'><a href="Player.html#split_lose%21-instance_method" title="Player#split_lose! (method)">#split_lose!</a></span>, <span class='object_link'><a href="Player.html#split_push%21-instance_method" title="Player#split_push! (method)">#split_push!</a></span>, <span class='object_link'><a href="Player.html#split_stand%21-instance_method" title="Player#split_stand! (method)">#split_stand!</a></span>, <span class='object_link'><a href="Player.html#split_standing%3F-instance_method" title="Player#split_standing? (method)">#split_standing?</a></span>, <span class='object_link'><a href="Player.html#split_win%21-instance_method" title="Player#split_win! (method)">#split_win!</a></span>, <span class='object_link'><a href="Player.html#stand%21-instance_method" title="Player#stand! (method)">#stand!</a></span>, <span class='object_link'><a href="Player.html#standing%3F-instance_method" title="Player#standing? (method)">#standing?</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="Player.html#blackjack%3F-instance_method" title="Player#blackjack? (method)">#blackjack?</a></span>, <span class='object_link'><a href="Player.html#busted%3F-instance_method" title="Player#busted? (method)">#busted?</a></span>, <span class='object_link'><a href="Player.html#clear_hand%21-instance_method" title="Player#clear_hand! (method)">#clear_hand!</a></span>, <span class='object_link'><a href="Player.html#deal-instance_method" title="Player#deal (method)">#deal</a></span>, <span class='object_link'><a href="Player.html#hand_value-instance_method" title="Player#hand_value (method)">#hand_value</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
-  <p class="signature first" id="initialize-instance_method">
+  <h3 class="signature first" id="initialize-instance_method">
   
     - (<tt><span class='object_link'><a href="" title="Dealer (class)">Dealer</a></span></tt>) <strong>initialize</strong>(name, bustlimit, softlimit) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     <p>
 The constructor
@@ -314,7 +326,7 @@ The constructor
   </div>
 </div>
 <div class="tags">
-  <h3>Parameters:</h3>
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -402,15 +414,16 @@ The soft limit of the dealer, typically 17
     
       
       <span id=""></span>
-      <span id="softlimit-instance_method"></span>
       <div class="method_details first">
-  <p class="signature first" id="softlimit-instance_method">
+  <h3 class="signature first" id="softlimit-instance_method">
   
     - (<tt>Integer</tt>) <strong>softlimit</strong>  <span class="extras">(readonly)</span>
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     <p>
 The soft dealer limit, typically 17
@@ -421,7 +434,7 @@ The soft dealer limit, typically 17
 </div>
 <div class="tags">
   
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -468,16 +481,18 @@ The soft dealer limit, typically 17
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
-    
+
     
       <div class="method_details first">
-  <p class="signature first" id="softlimit?-instance_method">
+  <h3 class="signature first" id="softlimit?-instance_method">
   
     - (<tt>Boolean</tt>) <strong>softlimit?</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     <p>
 Check if reached softlimit
@@ -488,7 +503,7 @@ Check if reached softlimit
 </div>
 <div class="tags">
   
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -531,13 +546,15 @@ true iff dealer has hit softlimit
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="upcard-instance_method">
+  <h3 class="signature " id="upcard-instance_method">
   
     - (<tt><span class='object_link'><a href="Card.html" title="Card (class)">Card</a></span></tt><sup>?</sup>) <strong>upcard</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     <p>
 Returns the dealer upcard unless hand is empty (should not happen)
@@ -548,7 +565,7 @@ Returns the dealer upcard unless hand is empty (should not happen)
 </div>
 <div class="tags">
   
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -599,13 +616,15 @@ Dealer upcard unless hand is empty, in which case it returns nil
 </div>
     
       <div class="method_details ">
-  <p class="signature " id="upcard_ace?-instance_method">
+  <h3 class="signature " id="upcard_ace?-instance_method">
   
     - (<tt>Boolean</tt>) <strong>upcard_ace?</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     <p>
 Check if upcard is ACE to help detect insurance 3:2 payout
@@ -616,7 +635,7 @@ Check if upcard is ACE to help detect insurance 3:2 payout
 </div>
 <div class="tags">
   
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -661,11 +680,11 @@ true iff upcard is ACE
   </div>
 
 </div>
-    
+
     <div id="footer">
-  Generated on Thu Jul 11 23:31:01 2013 by 
+  Generated on Wed Jul 17 00:04:19 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.4 (ruby-1.8.7).
+  0.8.6.2 (ruby-1.8.7).
 </div>
 
   </body>

@@ -50,6 +50,15 @@ class Dealer < Player
 	private :lose!
 	private :win!
 	private :double!
+	private :can_double?
 	private :make_bet?
+	private :standing?
+	private :stand!
+	private :split!
+	private :split?
+	private :can_split?
+	private :first_hand?
+	private :get_balance
+	private :set_balance!
 
 end

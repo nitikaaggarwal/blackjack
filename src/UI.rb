@@ -10,7 +10,7 @@ class UI
 
 	# Prints the welcome message
 	# @param dealer_name [String] Name of the dealer
-	# @return [nil]
+	# @return [void]
 	def welcome(dealer_name)
 		puts "Welcome to Hog's Head, Muggles!"
 		puts "Your dealer today is #{dealer_name}"
@@ -42,7 +42,7 @@ class UI
 	# @param name [String] Name of the player
 	# @param hand [Array<Card>] The hand of the player
 	# @param hand_value [Integer] Value of the hand
-	# @return [nil]
+	# @return [void]
 	def print_hand (name,hand,hand_value)
 
 		puts "#{name}, your cards are:"
@@ -142,7 +142,7 @@ class UI
 
 	# Prints the current card
 	# @param card_type [Constant] The type of card
-	# @return [nil]
+	# @return [void]
 	def print_card(card_type)
 		puts "You were dealt: #{card_type}"
 	end
@@ -150,7 +150,7 @@ class UI
 	# Prints a busted message for player
 	# @param name [String] Name of player
 	# @param value [Integer] Value of hand
-	# @return [nil]
+	# @return [void]
 	def print_busted(name,value)
 		print "Tough luck, #{name}. You got busted with a score: #{value}\n\n"
 	end
@@ -158,7 +158,7 @@ class UI
 	# Prints a message when player decided to stand
 	# @param name [String] Name of player
 	# @param value [Integer] Value of hand
-	# @return [nil]
+	# @return [void]
 	def print_stand(name,value)
 		print "#{name}, you are now standing at: #{value}\n\n"
 	end
@@ -166,7 +166,7 @@ class UI
 	# Prints a message when player loses
 	# @param name [String] Name of player
 	# @param bet [Integer] Bet value lost
-	# @return [nil]
+	# @return [void]
 	def print_lose(name,bet)
 		bet = -bet
 		puts "#{name}, you lost $#{bet.to_s}"
@@ -174,14 +174,14 @@ class UI
 
 	# Prints balance with user
 	# @param balance [Integer] Current user balance
-	# @return [nil]
+	# @return [void]
 	def print_balance(balance)
 		print "You now have $#{balance.to_s} remaining\n\n"
 	end
 
 	# Prints message when the bet ends in a push
 	# @param name [String] Name of player
-	# @return [nil]
+	# @return [void]
 	def print_push(name)
 		puts "#{name}, your game ended in a push."
 	end
@@ -189,34 +189,34 @@ class UI
 	# Prints a message when player wins
 	# @param name [String] Name of player
 	# @param bet [Integer] Winning bet amount
-	# @return [nil]
+	# @return [void]
 	def print_win(name,bet)
 		puts "Congratulations #{name}! You won $#{bet.to_s}!"
 	end
 
 	# Prints message indicating player payoff has increased
 	# if the dealer has received an Ace as the upcard
-	# @return [nil]
+	# @return [void]
 	def print_insurance
 		puts "The face card of dealer was an Ace! You get insurance on your payoff at 2:1."
 	end
 
 	# Prints a message if player gets a Blackjack
-	# @return [nil]
+	# @return [void]
 	def print_blackjack
 		print "BLACKJACK! Your payoff increases to 3:2 unless dealer gets one too.\n\n"
 	end
 
 	# Prints a message if current hand value of player is 21
 	# @param name [String] Name of player
-	# @return [nil]
+	# @return [void]
 	def print_limit(name)
 		print "Congratulations #{name}! You're unbeatable now!\n\n"
 	end
 
 	# Prints message if dealer goes bust
 	# @param name [String] Name of dealer
-	# @return [nil]
+	# @return [void]
 	def print_dealer_bust(name)
 		print "THE DEALER GOT BUSTED! Let's check if #{name} owes you.\n\n"
 	end
@@ -224,13 +224,13 @@ class UI
 	# Prints message that displays the dealer's upcard
 	# @param cardtype [Constant] The type of card
 	# @param value [Integer] Value of the upcard
-	# @return [nil]
+	# @return [void]
 	def print_upcard(cardtype,value)
 		print "The dealer's upcard is: #{cardtype} valued at #{value.to_s}\n\n"
 	end
 
 	# Prints message before game exits
-	# @return [nil]
+	# @return [void]
 	def print_exit
 		print "\n\nExiting game. Avada Kedavra!\n\n"
 	end
@@ -239,7 +239,7 @@ class UI
 	# @param player_name [String] Name of the player
 	# @param shark_name [String] Name of the loan shark
 	# @param cash [Integer] Cash lent by loan shark
-	# @return [nil]
+	# @return [void]
 	def print_nobalance(player_name, shark_name, cash)
 		puts "#{player_name}, it seems like you're out of cash."
 		puts "Our loan shark, #{shark_name} will be happy to lend you $#{cash.to_s}."
@@ -264,7 +264,7 @@ class UI
 	# Prints a message when player decides to split
 	# @param card_type [Constant] Card type dealt to first hand
 	# @param split_card_type [Constant] Card type dealt to second hand
-	# @return [nil]
+	# @return [void]
 	def print_split(card_type, split_card_type)
 		puts "You decided to split."
 		puts "You were dealt #{card_type} for the first hand"
@@ -272,26 +272,26 @@ class UI
 	end
 
 	# Prints that player is playing for first split
-	# @return [nil]
+	# @return [void]
 	def print_first_split
 		print "**** Playing first split ****\n\n"
 	end
 
 	# Prints that player is playing for the second split
-	# @return [nil]
+	# @return [void]
 	def print_second_split
 		print "**** Playing second split ****\n\n"
 	end
 
 	# Prints message when dealer gets a Blackjack
-	# @return [nil]
+	# @return [void]
 	def print_dealer_blackjack
 		print "Your dealer got a BLACKJACK! You could be in trouble now!\n\n"
 	end
 
 	# Prints a message indicating that it's now the dealer's turn to play
 	# @param name [String] Name of the dealer
-	# @return [nil]
+	# @return [void]
 	def print_dealer_turn(name)
 		print "It's your dealer, #{name}'s turn now!\n\n"
 	end
@@ -299,7 +299,7 @@ class UI
 	# Prints a message showing total winnings to player with split hand
 	# @param name [String] Name of player
 	# @param winnings [Integer] Combined winnings on both hands
-	# @return [nil]
+	# @return [void]
 	def print_split_winnings(name,winnings)
 		print "#{name}, total winnings on your split hand are: $#{winnings.to_s}\n\n"
 	end

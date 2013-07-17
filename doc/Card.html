@@ -6,18 +6,20 @@
 <title>
   Class: Card
   
-    &mdash; Documentation by YARD 0.7.4
+    &mdash; Documentation by YARD 0.8.6.2
   
 </title>
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
   relpath = '';
-  if (relpath != '') relpath += '/';
+  framesUrl = "frames.html#!" + escape(window.location.href);
 </script>
+
 
   <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
 
@@ -26,36 +28,41 @@
 
   </head>
   <body>
-    <script type="text/javascript" charset="utf-8">
-      if (window.top.frames.main) document.body.className = 'frames';
-    </script>
-    
     <div id="header">
       <div id="menu">
   
-    <a href="_index.html">Index (C)</a> &raquo; 
+    <a href="_index.html">Index (C)</a> &raquo;
     
     
     <span class="title">Card</span>
   
-  
+
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
   
-    <a id="class_list_link" href="#">Class List</a>
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
   
-    <a id="method_list_link" href="#">Method List</a>
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
   
-    <a id="file_list_link" href="#">File List</a>
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
   
 </div>
       <div class="clear"></div>
     </div>
-    
+
     <iframe id="search_frame"></iframe>
-    
+
     <div id="content"><h1>Class: Card
   
   
@@ -104,7 +111,7 @@ cards
 </div>
 <div class="tags">
   
-<h3>Author:</h3>
+<p class="tag_title">Author:</p>
 <ul class="author">
   
     <li>
@@ -124,6 +131,8 @@ Nitika Aggarwal
 
 </div>
 
+
+
   <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
   <ul class="summary">
     
@@ -137,7 +146,10 @@ Nitika Aggarwal
   </span>
   
   
-    <span class="note title readonly">readonly</span>
+  
+    
+      <span class="note title readonly">readonly</span>
+    
     
   
   
@@ -164,7 +176,10 @@ The card type, could be ace, king queen etc.
   </span>
   
   
-    <span class="note title readonly">readonly</span>
+  
+    
+      <span class="note title readonly">readonly</span>
+    
     
   
   
@@ -208,6 +223,7 @@ Value ranges from 1 to 11, depending on type.
   
   
   
+  
 
   
     <span class="summary_desc"><div class='inline'><p>
@@ -226,6 +242,7 @@ Returns true iff it&#8217;s an ace.
 
     
   </span>
+  
   
     <span class="note title constructor">constructor</span>
   
@@ -251,13 +268,15 @@ The constructor function.
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
-  <p class="signature first" id="initialize-instance_method">
+  <h3 class="signature first" id="initialize-instance_method">
   
     - (<tt><span class='object_link'><a href="" title="Card (class)">Card</a></span></tt>) <strong>initialize</strong>(type) 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     <p>
 The constructor function
@@ -267,7 +286,7 @@ The constructor function
   </div>
 </div>
 <div class="tags">
-  <h3>Parameters:</h3>
+  <p class="tag_title">Parameters:</p>
 <ul class="param">
   
     <li>
@@ -383,15 +402,16 @@ The type of card. Should be one of :ACE, :ONE, :TWO etc.
     
       
       <span id=""></span>
-      <span id="type-instance_method"></span>
       <div class="method_details first">
-  <p class="signature first" id="type-instance_method">
+  <h3 class="signature first" id="type-instance_method">
   
     - (<tt>Constant</tt>) <strong>type</strong>  <span class="extras">(readonly)</span>
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     <p>
 The card type, could be ace, king queen etc
@@ -402,7 +422,7 @@ The card type, could be ace, king queen etc
 </div>
 <div class="tags">
   
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -446,15 +466,16 @@ The card type, could be ace, king queen etc
     
       
       <span id=""></span>
-      <span id="value-instance_method"></span>
       <div class="method_details ">
-  <p class="signature " id="value-instance_method">
+  <h3 class="signature " id="value-instance_method">
   
     - (<tt>Integer</tt>) <strong>value</strong>  <span class="extras">(readonly)</span>
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     <p>
 Value ranges from 1 to 11, depending on type
@@ -465,7 +486,7 @@ Value ranges from 1 to 11, depending on type
 </div>
 <div class="tags">
   
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -512,16 +533,18 @@ Value ranges from 1 to 11, depending on type
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
-    
+
     
       <div class="method_details first">
-  <p class="signature first" id="ace?-instance_method">
+  <h3 class="signature first" id="ace?-instance_method">
   
     - (<tt>Boolean</tt>) <strong>ace?</strong> 
   
 
   
-</p><div class="docstring">
+
+  
+</h3><div class="docstring">
   <div class="discussion">
     <p>
 Returns true iff it&#8217;s an ace
@@ -532,7 +555,7 @@ Returns true iff it&#8217;s an ace
 </div>
 <div class="tags">
   
-<h3>Returns:</h3>
+<p class="tag_title">Returns:</p>
 <ul class="return">
   
     <li>
@@ -577,11 +600,11 @@ true or false
   </div>
 
 </div>
-    
+
     <div id="footer">
-  Generated on Thu Jul 11 23:31:00 2013 by 
+  Generated on Wed Jul 17 00:04:19 2013 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.7.4 (ruby-1.8.7).
+  0.8.6.2 (ruby-1.8.7).
 </div>
 
   </body>
